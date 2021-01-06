@@ -20,53 +20,42 @@ namespace QLNhaHang
             InitializeComponent();
         }
 
-        SqlConnection conn = new SqlConnection(@"Data Source='DESKTOP-TR8V8B8\MSSQLSERVER2505';Initial Catalog='QLCuaHang';Integrated Security='True'");
+        crud connect = new crud();
 
-        private void TableNhanVien()
+        //LOAD DATA
+        private void dataNhanVien()
         {
-            conn.Open();
-            string sql = "select ID,HoTen,TaiKhoan,MatKhau,ChucVu,CaLamViec from USERS";
-            SqlCommand com = new SqlCommand(sql, conn);
-            com.CommandType = CommandType.Text;
-            SqlDataAdapter da = new SqlDataAdapter(com);
-            DataTable dt = new DataTable();
-            da.Fill(dt);
-            conn.Close();
-            dtGridNhanVien.DataSource = dt;
+            DataTable dt = connect.readdata("select ID,HoTen,TaiKhoan,MatKhau,ChucVu,CaLamViec from USERS");
+            if (dt != null)
+            {
+                dtGridNhanVien.DataSource = dt;
+            }
         }
 
-        private void TableDanhMuc()
+        private void dataDanhMuc()
         {
-            conn.Open();
-            string sql = "select IDDanhMuc, TenDanhMuc from DANHMUC";
-            SqlCommand com = new SqlCommand(sql, conn);
-            com.CommandType = CommandType.Text;
-            SqlDataAdapter da = new SqlDataAdapter(com);
-            DataTable dt = new DataTable();
-            da.Fill(dt);
-            conn.Close();
-            dtGridDanhMuc.DataSource = dt;
+            DataTable dt = connect.readdata("select IDDanhMuc, TenDanhMuc from DANHMUC");
+            if (dt != null)
+            {
+                dtGridDanhMuc.DataSource = dt;
+            }
         }
 
-        private void TableSanPham()
+        private void dataSanPham()
         {
-            conn.Open();
-            string sql = "select IDSanPham, TenSanPham, Gia from MATHANG";
-            SqlCommand com = new SqlCommand(sql, conn);
-            com.CommandType = CommandType.Text;
-            SqlDataAdapter da = new SqlDataAdapter(com);
-            DataTable dt = new DataTable();
-            da.Fill(dt);
-            conn.Close();
-            dtGridSanPham.DataSource = dt;
+            DataTable dt = connect.readdata("select IDSanPham, TenSanPham, Gia from MATHANG");
+            if (dt != null)
+            {
+                dtGridSanPham.DataSource = dt;
+            }
         }
 
         private void Main_Load(object sender, EventArgs e)
         {
             //MessageBox.Show("Xin chào User có Chức Vụ: " + Login.ID_USER);
-            TableNhanVien();
-            TableDanhMuc();
-            TableSanPham();
+            dataNhanVien();
+            dataDanhMuc();
+            dataSanPham();
         }
     }
 }
