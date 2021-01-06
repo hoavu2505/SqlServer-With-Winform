@@ -57,5 +57,17 @@ namespace QLNhaHang
             dataDanhMuc();
             dataSanPham();
         }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            Add_NV addnv = new Add_NV();
+            addnv.ShowDialog();
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            Edit_NV editnv = new Edit_NV();
+            editnv.ShowDialog();
+        }
     }
 }

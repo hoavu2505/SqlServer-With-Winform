@@ -108,3 +108,5 @@ D:\project C#\QLCuaHang\obj\Debug\QLNhaHang.csproj.CoreCompileInputs.cache
 D:\project C#\QLCuaHang\obj\Debug\QLNhaHang.csproj.CopyComplete
 D:\project C#\QLCuaHang\obj\Debug\QLNhaHang.exe
 D:\project C#\QLCuaHang\obj\Debug\QLNhaHang.pdb
+D:\project C#\QLCuaHang\obj\Debug\QLNhaHang.Add_NV.resources
+D:\project C#\QLCuaHang\obj\Debug\QLNhaHang.Edit_NV.resources
