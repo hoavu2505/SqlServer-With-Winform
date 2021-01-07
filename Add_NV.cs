@@ -25,9 +25,8 @@ namespace QLNhaHang
 
         string gt;
         private void btn_them_Click(object sender, EventArgs e)
-        {
-            //Xử lý dữ liệu radio của trường giới tính
-            
+        {           
+            //Xử lý dữ liệu radio của trường giới tính         
             if (rb_nam.Checked == true)
             {
                 gt = rb_nam.Text;
@@ -37,12 +36,15 @@ namespace QLNhaHang
                 gt = rb_nu.Text;
             }
             //Thực hiện thêm dữ liệu
-            if (connect.exedata("insert into USERS (HoTen,NgaySinh,GioiTinh,DiaChi,SDT,NgayBatDauLam,CaLamViec,TaiKhoan,MatKhau,ChucVu) values (N'" + txt_hoten.Text + "', N'" + dtp_ngaysinh.Value + "', N'" + gt + "', N'" + txt_diachi.Text + "', N'" + txt_sdt.Text + "', N'" + dtp_ngaylamviec.Value + "', N'" + cb_calamviec.Text + "', N'" + txt_taikhoan.Text + "', N'" + txt_matkhau.Text + "', N'" + txt_chucvu.Text + "')") == true)
+            if (txt_hoten.Text != "" || txt_taikhoan.Text != "" || txt_matkhau.Text != "" || txt_chucvu.Text != "" || cb_calamviec.Text != "")
             {
-                DialogResult dlr = MessageBox.Show("Đã thêm dữ liệu thành công");
-                if(dlr == DialogResult.OK)
+                if (connect.exedata("insert into USERS (HoTen,NgaySinh,GioiTinh,DiaChi,SDT,NgayBatDauLam,CaLamViec,TaiKhoan,MatKhau,ChucVu) values (N'" + txt_hoten.Text + "', N'" + dtp_ngaysinh.Value + "', N'" + gt + "', N'" + txt_diachi.Text + "', N'" + txt_sdt.Text + "', N'" + dtp_ngaylamviec.Value + "', N'" + cb_calamviec.Text + "', N'" + txt_taikhoan.Text + "', N'" + txt_matkhau.Text + "', N'" + txt_chucvu.Text + "')") == true)
                 {
-                    this.Close();
+                    DialogResult dlr = MessageBox.Show("Đã thêm dữ liệu thành công");
+                    if (dlr == DialogResult.OK)
+                    {
+                        this.Close();
+                    }
                 }
             }
             else

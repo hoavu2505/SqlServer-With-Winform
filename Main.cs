@@ -41,6 +41,7 @@ namespace QLNhaHang
             }
         }
 
+
         private void dataSanPham()
         {
             DataTable dt = connect.readdata("select IDSanPham, TenSanPham, Gia from MATHANG");
@@ -80,12 +81,28 @@ namespace QLNhaHang
         {
             Add_DM adddm = new Add_DM();
             adddm.ShowDialog();
+            DataTable dt = connect.readdata("select IDDanhMuc, TenDanhMuc from DANHMUC");
+            if (dt != null)
+            {
+                dtGridDanhMuc.DataSource = dt;
+            }
         }
 
         private void button10_Click(object sender, EventArgs e)
         {
             Edit_DM editdm = new Edit_DM();
             editdm.ShowDialog();
+        }
+
+        private void button15_Click(object sender, EventArgs e)
+        {
+            Add_SP addsp = new Add_SP();
+            addsp.ShowDialog();
+            DataTable dt = connect.readdata("select IDSanPham, TenSanPham, Gia from MATHANG");
+            if (dt != null)
+            {
+                dtGridSanPham.DataSource = dt;
+            }
         }
     }
 }
