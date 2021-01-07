@@ -62,12 +62,30 @@ namespace QLNhaHang
         {
             Add_NV addnv = new Add_NV();
             addnv.ShowDialog();
+            //LOAD lại dữ liệu sau khi thêm
+            DataTable dt = connect.readdata("select ID,HoTen,TaiKhoan,MatKhau,ChucVu,CaLamViec from USERS");
+            if (dt != null)
+            {
+                dtGridNhanVien.DataSource = dt;
+            }
         }
 
         private void button7_Click(object sender, EventArgs e)
         {
             Edit_NV editnv = new Edit_NV();
             editnv.ShowDialog();
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            Add_DM adddm = new Add_DM();
+            adddm.ShowDialog();
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            Edit_DM editdm = new Edit_DM();
+            editdm.ShowDialog();
         }
     }
 }

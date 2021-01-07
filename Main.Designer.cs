@@ -634,6 +634,7 @@ namespace QLNhaHang
             this.button10.TabIndex = 11;
             this.button10.Text = "Sửa";
             this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
             // button11
             // 
@@ -643,6 +644,7 @@ namespace QLNhaHang
             this.button11.TabIndex = 10;
             this.button11.Text = "Thêm";
             this.button11.UseVisualStyleBackColor = true;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
             // 
             // button12
             // 

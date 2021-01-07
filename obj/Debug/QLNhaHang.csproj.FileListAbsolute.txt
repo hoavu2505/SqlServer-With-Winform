@@ -110,3 +110,7 @@ D:\project C#\QLCuaHang\obj\Debug\QLNhaHang.exe
 D:\project C#\QLCuaHang\obj\Debug\QLNhaHang.pdb
 D:\project C#\QLCuaHang\obj\Debug\QLNhaHang.Add_NV.resources
 D:\project C#\QLCuaHang\obj\Debug\QLNhaHang.Edit_NV.resources
+D:\project C#\QLCuaHang\obj\Debug\QLNhaHang.Add_DM.resources
+D:\project C#\QLCuaHang\obj\Debug\QLNhaHang.Edit_DM.resources
+D:\project C#\QLCuaHang\obj\Debug\QLNhaHang.Add_SP.resources
+D:\project C#\QLCuaHang\obj\Debug\QLNhaHang.Edit_SP.resources

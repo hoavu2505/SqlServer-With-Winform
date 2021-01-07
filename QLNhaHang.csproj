@@ -77,18 +77,42 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Add_DM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Add_DM.Designer.cs">
+      <DependentUpon>Add_DM.cs</DependentUpon>
+    </Compile>
     <Compile Include="Add_NV.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Add_NV.Designer.cs">
       <DependentUpon>Add_NV.cs</DependentUpon>
     </Compile>
+    <Compile Include="Add_SP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Add_SP.Designer.cs">
+      <DependentUpon>Add_SP.cs</DependentUpon>
+    </Compile>
     <Compile Include="crud.cs" />
+    <Compile Include="Edit_DM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edit_DM.Designer.cs">
+      <DependentUpon>Edit_DM.cs</DependentUpon>
+    </Compile>
     <Compile Include="Edit_NV.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Edit_NV.Designer.cs">
       <DependentUpon>Edit_NV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Edit_SP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edit_SP.Designer.cs">
+      <DependentUpon>Edit_SP.cs</DependentUpon>
     </Compile>
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
@@ -104,11 +128,23 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Add_DM.resx">
+      <DependentUpon>Add_DM.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Add_NV.resx">
       <DependentUpon>Add_NV.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Add_SP.resx">
+      <DependentUpon>Add_SP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Edit_DM.resx">
+      <DependentUpon>Edit_DM.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Edit_NV.resx">
       <DependentUpon>Edit_NV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Edit_SP.resx">
+      <DependentUpon>Edit_SP.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
