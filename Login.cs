@@ -60,9 +60,18 @@ namespace QLNhaHang
             ID_USER = getID(txt_username.Text, txt_pass.Text);
             if (ID_USER != "")
             {
-                Main login = new Main();
-                login.Show();
-                this.Hide();
+                if (ID_USER == "Admin")
+                {
+                    Main login = new Main();
+                    login.Show();
+                    this.Hide();
+                }
+                if (ID_USER == "Nhân Viên")
+                {
+                    NhanVien login = new NhanVien();
+                    login.Show();
+                    this.Hide();
+                }
             }
             else
             {

@@ -36,9 +36,9 @@ namespace QLNhaHang
                 gt = rb_nu.Text;
             }
             //Thực hiện thêm dữ liệu
-            if (txt_hoten.Text != "" || txt_taikhoan.Text != "" || txt_matkhau.Text != "" || txt_chucvu.Text != "" || cb_calamviec.Text != "")
+            if (txt_hoten.Text != "" || txt_taikhoan.Text != "" || txt_matkhau.Text != "" || cb_chucvu.Text != "" || cb_calamviec.Text != "")
             {
-                if (connect.exedata("insert into USERS (HoTen,NgaySinh,GioiTinh,DiaChi,SDT,NgayBatDauLam,CaLamViec,TaiKhoan,MatKhau,ChucVu) values (N'" + txt_hoten.Text + "', N'" + dtp_ngaysinh.Value + "', N'" + gt + "', N'" + txt_diachi.Text + "', N'" + txt_sdt.Text + "', N'" + dtp_ngaylamviec.Value + "', N'" + cb_calamviec.Text + "', N'" + txt_taikhoan.Text + "', N'" + txt_matkhau.Text + "', N'" + txt_chucvu.Text + "')") == true)
+                if (connect.exedata("insert into USERS (HoTen,NgaySinh,GioiTinh,DiaChi,SDT,NgayBatDauLam,CaLamViec,TaiKhoan,MatKhau,ChucVu) values (N'" + txt_hoten.Text + "', N'" + dtp_ngaysinh.Value + "', N'" + gt + "', N'" + txt_diachi.Text + "', N'" + txt_sdt.Text + "', N'" + dtp_ngaylamviec.Value + "', N'" + cb_calamviec.Text + "', N'" + txt_taikhoan.Text + "', N'" + txt_matkhau.Text + "', N'" + cb_chucvu.Text + "')") == true)
                 {
                     DialogResult dlr = MessageBox.Show("Đã thêm dữ liệu thành công");
                     if (dlr == DialogResult.OK)
@@ -59,6 +59,11 @@ namespace QLNhaHang
         {
             if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
             e.Handled = true;
+        }
+
+        private void btn_huybo_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

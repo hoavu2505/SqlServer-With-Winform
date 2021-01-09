@@ -45,12 +45,12 @@ namespace QLNhaHang
             this.txt_dongia = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.txt_khuyenmai = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.btn_addsp = new System.Windows.Forms.Button();
+            this.btn_huybo = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.cb_danhmuc = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.btn_addsp = new System.Windows.Forms.Button();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nb_soluong)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -216,28 +216,17 @@ namespace QLNhaHang
             this.txt_khuyenmai.Name = "txt_khuyenmai";
             this.txt_khuyenmai.Size = new System.Drawing.Size(181, 25);
             this.txt_khuyenmai.TabIndex = 20;
-            this.txt_khuyenmai.UseSystemPasswordChar = true;
             // 
-            // button2
+            // btn_huybo
             // 
-            this.button2.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(756, 377);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(98, 42);
-            this.button2.TabIndex = 30;
-            this.button2.Text = "HỦY BỎ";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // btn_addsp
-            // 
-            this.btn_addsp.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_addsp.Location = new System.Drawing.Point(529, 377);
-            this.btn_addsp.Name = "btn_addsp";
-            this.btn_addsp.Size = new System.Drawing.Size(98, 42);
-            this.btn_addsp.TabIndex = 29;
-            this.btn_addsp.Text = "THÊM";
-            this.btn_addsp.UseVisualStyleBackColor = true;
-            this.btn_addsp.Click += new System.EventHandler(this.btn_addsp_Click);
+            this.btn_huybo.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_huybo.Location = new System.Drawing.Point(756, 377);
+            this.btn_huybo.Name = "btn_huybo";
+            this.btn_huybo.Size = new System.Drawing.Size(98, 42);
+            this.btn_huybo.TabIndex = 30;
+            this.btn_huybo.Text = "HỦY BỎ";
+            this.btn_huybo.UseVisualStyleBackColor = true;
+            this.btn_huybo.Click += new System.EventHandler(this.btn_huybo_Click);
             // 
             // label1
             // 
@@ -281,16 +270,27 @@ namespace QLNhaHang
             this.label6.TabIndex = 19;
             this.label6.Text = "Danh Mục";
             // 
+            // btn_addsp
+            // 
+            this.btn_addsp.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_addsp.Location = new System.Drawing.Point(529, 377);
+            this.btn_addsp.Name = "btn_addsp";
+            this.btn_addsp.Size = new System.Drawing.Size(98, 42);
+            this.btn_addsp.TabIndex = 34;
+            this.btn_addsp.Text = "THÊM";
+            this.btn_addsp.UseVisualStyleBackColor = true;
+            this.btn_addsp.Click += new System.EventHandler(this.btn_addsp_Click);
+            // 
             // Add_SP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(882, 463);
+            this.Controls.Add(this.btn_addsp);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.btn_addsp);
+            this.Controls.Add(this.btn_huybo);
             this.Controls.Add(this.label1);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -328,11 +328,11 @@ namespace QLNhaHang
         private System.Windows.Forms.TextBox txt_dongia;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox txt_khuyenmai;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button btn_addsp;
+        private System.Windows.Forms.Button btn_huybo;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.ComboBox cb_danhmuc;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button btn_addsp;
     }
 }

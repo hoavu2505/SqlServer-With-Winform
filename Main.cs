@@ -54,9 +54,11 @@ namespace QLNhaHang
         private void Main_Load(object sender, EventArgs e)
         {
             //MessageBox.Show("Xin chào User có Chức Vụ: " + Login.ID_USER);
+            
             dataNhanVien();
             dataDanhMuc();
             dataSanPham();
+            
         }
 
         private void button6_Click(object sender, EventArgs e)

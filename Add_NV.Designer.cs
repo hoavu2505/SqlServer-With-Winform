@@ -31,7 +31,6 @@ namespace QLNhaHang
         {
             this.txt_hoten = new System.Windows.Forms.TextBox();
             this.txt_diachi = new System.Windows.Forms.TextBox();
-            this.txt_chucvu = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -50,11 +49,12 @@ namespace QLNhaHang
             this.label10 = new System.Windows.Forms.Label();
             this.txt_matkhau = new System.Windows.Forms.TextBox();
             this.btn_them = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btn_huybo = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
             this.txt_sdt = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.cb_chucvu = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -74,14 +74,6 @@ namespace QLNhaHang
             this.txt_diachi.Name = "txt_diachi";
             this.txt_diachi.Size = new System.Drawing.Size(181, 25);
             this.txt_diachi.TabIndex = 3;
-            // 
-            // txt_chucvu
-            // 
-            this.txt_chucvu.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_chucvu.Location = new System.Drawing.Point(234, 421);
-            this.txt_chucvu.Name = "txt_chucvu";
-            this.txt_chucvu.Size = new System.Drawing.Size(181, 25);
-            this.txt_chucvu.TabIndex = 4;
             // 
             // label1
             // 
@@ -264,15 +256,16 @@ namespace QLNhaHang
             this.btn_them.UseVisualStyleBackColor = true;
             this.btn_them.Click += new System.EventHandler(this.btn_them_Click);
             // 
-            // button2
+            // btn_huybo
             // 
-            this.button2.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(756, 508);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(98, 42);
-            this.button2.TabIndex = 23;
-            this.button2.Text = "HỦY BỎ";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btn_huybo.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_huybo.Location = new System.Drawing.Point(756, 508);
+            this.btn_huybo.Name = "btn_huybo";
+            this.btn_huybo.Size = new System.Drawing.Size(98, 42);
+            this.btn_huybo.TabIndex = 23;
+            this.btn_huybo.Text = "HỦY BỎ";
+            this.btn_huybo.UseVisualStyleBackColor = true;
+            this.btn_huybo.Click += new System.EventHandler(this.btn_huybo_Click);
             // 
             // label11
             // 
@@ -309,13 +302,13 @@ namespace QLNhaHang
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.cb_chucvu);
             this.groupBox2.Controls.Add(this.txt_hoten);
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.txt_sdt);
             this.groupBox2.Controls.Add(this.label11);
             this.groupBox2.Controls.Add(this.label8);
             this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Controls.Add(this.txt_chucvu);
             this.groupBox2.Controls.Add(this.cb_calamviec);
             this.groupBox2.Controls.Add(this.rb_nam);
             this.groupBox2.Controls.Add(this.label7);
@@ -334,6 +327,19 @@ namespace QLNhaHang
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thông Tin";
             // 
+            // cb_chucvu
+            // 
+            this.cb_chucvu.DisplayMember = "Nhân Viên";
+            this.cb_chucvu.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cb_chucvu.FormattingEnabled = true;
+            this.cb_chucvu.Items.AddRange(new object[] {
+            "Nhân Viên"});
+            this.cb_chucvu.Location = new System.Drawing.Point(234, 418);
+            this.cb_chucvu.Name = "cb_chucvu";
+            this.cb_chucvu.Size = new System.Drawing.Size(181, 25);
+            this.cb_chucvu.TabIndex = 26;
+            this.cb_chucvu.Text = "Nhân Viên";
+            // 
             // Add_NV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -341,7 +347,7 @@ namespace QLNhaHang
             this.ClientSize = new System.Drawing.Size(882, 579);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btn_huybo);
             this.Controls.Add(this.btn_them);
             this.Controls.Add(this.label1);
             this.MaximizeBox = false;
@@ -362,7 +368,6 @@ namespace QLNhaHang
 
         private System.Windows.Forms.TextBox txt_hoten;
         private System.Windows.Forms.TextBox txt_diachi;
-        private System.Windows.Forms.TextBox txt_chucvu;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
@@ -381,10 +386,11 @@ namespace QLNhaHang
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox txt_matkhau;
         private System.Windows.Forms.Button btn_them;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btn_huybo;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox txt_sdt;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.ComboBox cb_chucvu;
     }
 }
