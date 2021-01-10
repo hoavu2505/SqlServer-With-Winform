@@ -25,7 +25,7 @@ namespace QLNhaHang
         //LOAD DATA
         private void dataNhanVien()
         {
-            DataTable dt = connect.readdata("select ID,HoTen,TaiKhoan,MatKhau,ChucVu,CaLamViec from USERS");
+            DataTable dt = connect.readdata("select * from ViewDSNhanVien");
             if (dt != null)
             {
                 dtGridNhanVien.DataSource = dt;
@@ -44,7 +44,7 @@ namespace QLNhaHang
 
         private void dataSanPham()
         {
-            DataTable dt = connect.readdata("select IDSanPham, TenSanPham, Gia from MATHANG");
+            DataTable dt = connect.readdata("select * from ViewDSSanPham");
             if (dt != null)
             {
                 dtGridSanPham.DataSource = dt;
@@ -61,12 +61,13 @@ namespace QLNhaHang
             
         }
 
+        //Thêm Nhân Viên
         private void button6_Click(object sender, EventArgs e)
         {
             Add_NV addnv = new Add_NV();
             addnv.ShowDialog();
             //LOAD lại dữ liệu sau khi thêm
-            DataTable dt = connect.readdata("select ID,HoTen,TaiKhoan,MatKhau,ChucVu,CaLamViec from USERS");
+            DataTable dt = connect.readdata("select * from ViewDSNhanVien");
             if (dt != null)
             {
                 dtGridNhanVien.DataSource = dt;
@@ -79,6 +80,7 @@ namespace QLNhaHang
             editnv.ShowDialog();
         }
 
+        //Thêm Danh Mục
         private void button11_Click(object sender, EventArgs e)
         {
             Add_DM adddm = new Add_DM();
@@ -96,11 +98,12 @@ namespace QLNhaHang
             editdm.ShowDialog();
         }
 
+        //Thêm Sản Phẩm
         private void button15_Click(object sender, EventArgs e)
         {
             Add_SP addsp = new Add_SP();
             addsp.ShowDialog();
-            DataTable dt = connect.readdata("select IDSanPham, TenSanPham, Gia from MATHANG");
+            DataTable dt = connect.readdata("select * from ViewDSSanPham");
             if (dt != null)
             {
                 dtGridSanPham.DataSource = dt;
