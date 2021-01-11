@@ -190,9 +190,9 @@ namespace QLNhaHang
             this.cb_calamviec.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cb_calamviec.FormattingEnabled = true;
             this.cb_calamviec.Items.AddRange(new object[] {
-            "Ca 1",
-            "Ca 2",
-            "Ca 3"});
+            "1",
+            "2",
+            "3"});
             this.cb_calamviec.Location = new System.Drawing.Point(234, 362);
             this.cb_calamviec.Name = "cb_calamviec";
             this.cb_calamviec.Size = new System.Drawing.Size(181, 25);
