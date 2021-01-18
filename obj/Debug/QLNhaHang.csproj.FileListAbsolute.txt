@@ -115,3 +115,4 @@ D:\project C#\QLCuaHang\obj\Debug\QLNhaHang.Edit_DM.resources
 D:\project C#\QLCuaHang\obj\Debug\QLNhaHang.Add_SP.resources
 D:\project C#\QLCuaHang\obj\Debug\QLNhaHang.Edit_SP.resources
 D:\project C#\QLCuaHang\obj\Debug\QLNhaHang.NhanVien.resources
+D:\project C#\QLCuaHang\obj\Debug\QLNhaHang.Add_KH.resources

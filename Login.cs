@@ -22,6 +22,8 @@ namespace QLNhaHang
 
         SqlConnection conn = new SqlConnection(@"Data Source='DESKTOP-TR8V8B8\MSSQLSERVER2505';Initial Catalog='QLCuaHang';Integrated Security='True'");
 
+        public static int ID;
+
         //Lấy ID User
         private string getID(string username, string pass)
         {
@@ -29,7 +31,7 @@ namespace QLNhaHang
             try
             {
                 conn.Open();
-                SqlCommand cmd = new SqlCommand("SELECT * FROM USERS WHERE TaiKhoan ='" + username + "' and MatKhau ='" + pass + "'", conn);
+                SqlCommand cmd = new SqlCommand("SELECT * FROM ft_DangNhap('" + username + "', '" + pass + "')", conn);
                 SqlDataAdapter da = new SqlDataAdapter(cmd); //Chuyển dữ liệu về
                 DataTable dt = new DataTable(); //Tạo kho ảo lưu trữ dữ liệu
                 da.Fill(dt); //Đổ dữ liệu vào kho
@@ -38,6 +40,7 @@ namespace QLNhaHang
                     foreach (DataRow dr in dt.Rows)
                     {
                         id = dr["ChucVu"].ToString();
+                        ID = Convert.ToInt32(dr["ID"].ToString());
                     }
                 }
             }

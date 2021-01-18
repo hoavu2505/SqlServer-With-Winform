@@ -34,8 +34,8 @@ namespace QLNhaHang
             this.button8 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.btn_TKNhanVien = new System.Windows.Forms.Button();
+            this.txt_TKNhanVien = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.dtGridNhanVien = new System.Windows.Forms.DataGridView();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -48,8 +48,8 @@ namespace QLNhaHang
             this.button9 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
-            this.button12 = new System.Windows.Forms.Button();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.btn_TKDanhMuc = new System.Windows.Forms.Button();
+            this.txt_TKDanhMuc = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.dtGridDanhMuc = new System.Windows.Forms.DataGridView();
             this.IDDanhMuc = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -58,19 +58,23 @@ namespace QLNhaHang
             this.button13 = new System.Windows.Forms.Button();
             this.button14 = new System.Windows.Forms.Button();
             this.button15 = new System.Windows.Forms.Button();
-            this.button16 = new System.Windows.Forms.Button();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.btn_TKSanPham = new System.Windows.Forms.Button();
+            this.txt_TKSanPham = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.dtGridSanPham = new System.Windows.Forms.DataGridView();
+            this.IDSanPham = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenSanPham = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NgaySX = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.XuatXu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SoLuongTon = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.KhuyenMai = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Gia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.button17 = new System.Windows.Forms.Button();
-            this.button18 = new System.Windows.Forms.Button();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.btn_TKKhachHang = new System.Windows.Forms.Button();
+            this.txt_TKKhachHang = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.dtGridKhachHang = new System.Windows.Forms.DataGridView();
-            this.namekh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.point = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage6 = new System.Windows.Forms.TabPage();
             this.button19 = new System.Windows.Forms.Button();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
@@ -85,13 +89,9 @@ namespace QLNhaHang
             this.ngban = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ngayban = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tongtien = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.IDSanPham = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenSanPham = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NgaySX = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.XuatXu = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SoLuongTon = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.KhuyenMai = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Gia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.namekh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Diem = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tablecontrol.SuspendLayout();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtGridNhanVien)).BeginInit();
@@ -129,8 +129,8 @@ namespace QLNhaHang
             this.tabPage2.Controls.Add(this.button8);
             this.tabPage2.Controls.Add(this.button7);
             this.tabPage2.Controls.Add(this.button6);
-            this.tabPage2.Controls.Add(this.button5);
-            this.tabPage2.Controls.Add(this.textBox4);
+            this.tabPage2.Controls.Add(this.btn_TKNhanVien);
+            this.tabPage2.Controls.Add(this.txt_TKNhanVien);
             this.tabPage2.Controls.Add(this.label9);
             this.tabPage2.Controls.Add(this.dtGridNhanVien);
             this.tabPage2.Location = new System.Drawing.Point(4, 29);
@@ -169,21 +169,22 @@ namespace QLNhaHang
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
-            // button5
+            // btn_TKNhanVien
             // 
-            this.button5.Location = new System.Drawing.Point(37, 182);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(114, 40);
-            this.button5.TabIndex = 3;
-            this.button5.Text = "Tìm Kiếm";
-            this.button5.UseVisualStyleBackColor = true;
+            this.btn_TKNhanVien.Location = new System.Drawing.Point(37, 182);
+            this.btn_TKNhanVien.Name = "btn_TKNhanVien";
+            this.btn_TKNhanVien.Size = new System.Drawing.Size(114, 40);
+            this.btn_TKNhanVien.TabIndex = 3;
+            this.btn_TKNhanVien.Text = "Tìm Kiếm";
+            this.btn_TKNhanVien.UseVisualStyleBackColor = true;
+            this.btn_TKNhanVien.Click += new System.EventHandler(this.btn_TKNhanVien_Click);
             // 
-            // textBox4
+            // txt_TKNhanVien
             // 
-            this.textBox4.Location = new System.Drawing.Point(97, 89);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(257, 27);
-            this.textBox4.TabIndex = 2;
+            this.txt_TKNhanVien.Location = new System.Drawing.Point(97, 89);
+            this.txt_TKNhanVien.Name = "txt_TKNhanVien";
+            this.txt_TKNhanVien.Size = new System.Drawing.Size(257, 27);
+            this.txt_TKNhanVien.TabIndex = 2;
             // 
             // label9
             // 
@@ -212,6 +213,7 @@ namespace QLNhaHang
             this.dtGridNhanVien.ReadOnly = true;
             this.dtGridNhanVien.Size = new System.Drawing.Size(1281, 821);
             this.dtGridNhanVien.TabIndex = 0;
+            this.dtGridNhanVien.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtGridNhanVien_CellClick);
             // 
             // ID
             // 
@@ -267,8 +269,8 @@ namespace QLNhaHang
             this.tabPage3.Controls.Add(this.button9);
             this.tabPage3.Controls.Add(this.button10);
             this.tabPage3.Controls.Add(this.button11);
-            this.tabPage3.Controls.Add(this.button12);
-            this.tabPage3.Controls.Add(this.textBox5);
+            this.tabPage3.Controls.Add(this.btn_TKDanhMuc);
+            this.tabPage3.Controls.Add(this.txt_TKDanhMuc);
             this.tabPage3.Controls.Add(this.label10);
             this.tabPage3.Controls.Add(this.dtGridDanhMuc);
             this.tabPage3.Location = new System.Drawing.Point(4, 29);
@@ -307,21 +309,22 @@ namespace QLNhaHang
             this.button11.UseVisualStyleBackColor = true;
             this.button11.Click += new System.EventHandler(this.button11_Click);
             // 
-            // button12
+            // btn_TKDanhMuc
             // 
-            this.button12.Location = new System.Drawing.Point(37, 182);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(114, 40);
-            this.button12.TabIndex = 9;
-            this.button12.Text = "Tìm Kiếm";
-            this.button12.UseVisualStyleBackColor = true;
+            this.btn_TKDanhMuc.Location = new System.Drawing.Point(37, 182);
+            this.btn_TKDanhMuc.Name = "btn_TKDanhMuc";
+            this.btn_TKDanhMuc.Size = new System.Drawing.Size(114, 40);
+            this.btn_TKDanhMuc.TabIndex = 9;
+            this.btn_TKDanhMuc.Text = "Tìm Kiếm";
+            this.btn_TKDanhMuc.UseVisualStyleBackColor = true;
+            this.btn_TKDanhMuc.Click += new System.EventHandler(this.btn_TKDanhMuc_Click);
             // 
-            // textBox5
+            // txt_TKDanhMuc
             // 
-            this.textBox5.Location = new System.Drawing.Point(97, 89);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(257, 27);
-            this.textBox5.TabIndex = 8;
+            this.txt_TKDanhMuc.Location = new System.Drawing.Point(97, 89);
+            this.txt_TKDanhMuc.Name = "txt_TKDanhMuc";
+            this.txt_TKDanhMuc.Size = new System.Drawing.Size(257, 27);
+            this.txt_TKDanhMuc.TabIndex = 8;
             // 
             // label10
             // 
@@ -346,6 +349,7 @@ namespace QLNhaHang
             this.dtGridDanhMuc.ReadOnly = true;
             this.dtGridDanhMuc.Size = new System.Drawing.Size(1281, 821);
             this.dtGridDanhMuc.TabIndex = 0;
+            this.dtGridDanhMuc.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtGridDanhMuc_CellClick);
             // 
             // IDDanhMuc
             // 
@@ -369,8 +373,8 @@ namespace QLNhaHang
             this.tabPage4.Controls.Add(this.button13);
             this.tabPage4.Controls.Add(this.button14);
             this.tabPage4.Controls.Add(this.button15);
-            this.tabPage4.Controls.Add(this.button16);
-            this.tabPage4.Controls.Add(this.textBox6);
+            this.tabPage4.Controls.Add(this.btn_TKSanPham);
+            this.tabPage4.Controls.Add(this.txt_TKSanPham);
             this.tabPage4.Controls.Add(this.label11);
             this.tabPage4.Controls.Add(this.dtGridSanPham);
             this.tabPage4.Location = new System.Drawing.Point(4, 29);
@@ -408,21 +412,22 @@ namespace QLNhaHang
             this.button15.UseVisualStyleBackColor = true;
             this.button15.Click += new System.EventHandler(this.button15_Click);
             // 
-            // button16
+            // btn_TKSanPham
             // 
-            this.button16.Location = new System.Drawing.Point(37, 182);
-            this.button16.Name = "button16";
-            this.button16.Size = new System.Drawing.Size(114, 40);
-            this.button16.TabIndex = 9;
-            this.button16.Text = "Tìm Kiếm";
-            this.button16.UseVisualStyleBackColor = true;
+            this.btn_TKSanPham.Location = new System.Drawing.Point(37, 182);
+            this.btn_TKSanPham.Name = "btn_TKSanPham";
+            this.btn_TKSanPham.Size = new System.Drawing.Size(114, 40);
+            this.btn_TKSanPham.TabIndex = 9;
+            this.btn_TKSanPham.Text = "Tìm Kiếm";
+            this.btn_TKSanPham.UseVisualStyleBackColor = true;
+            this.btn_TKSanPham.Click += new System.EventHandler(this.btn_TKSanPham_Click);
             // 
-            // textBox6
+            // txt_TKSanPham
             // 
-            this.textBox6.Location = new System.Drawing.Point(97, 89);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(257, 27);
-            this.textBox6.TabIndex = 8;
+            this.txt_TKSanPham.Location = new System.Drawing.Point(97, 89);
+            this.txt_TKSanPham.Name = "txt_TKSanPham";
+            this.txt_TKSanPham.Size = new System.Drawing.Size(257, 27);
+            this.txt_TKSanPham.TabIndex = 8;
             // 
             // label11
             // 
@@ -453,13 +458,68 @@ namespace QLNhaHang
             this.dtGridSanPham.Size = new System.Drawing.Size(1281, 821);
             this.dtGridSanPham.TabIndex = 0;
             // 
+            // IDSanPham
+            // 
+            this.IDSanPham.DataPropertyName = "ID";
+            this.IDSanPham.HeaderText = "ID";
+            this.IDSanPham.Name = "IDSanPham";
+            this.IDSanPham.ReadOnly = true;
+            // 
+            // TenSanPham
+            // 
+            this.TenSanPham.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.TenSanPham.DataPropertyName = "TenSanPham";
+            this.TenSanPham.HeaderText = "Tên Sản Phẩm";
+            this.TenSanPham.Name = "TenSanPham";
+            this.TenSanPham.ReadOnly = true;
+            // 
+            // NgaySX
+            // 
+            this.NgaySX.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.NgaySX.DataPropertyName = "NgaySX";
+            this.NgaySX.HeaderText = "Ngày Sản Xuất";
+            this.NgaySX.Name = "NgaySX";
+            this.NgaySX.ReadOnly = true;
+            // 
+            // XuatXu
+            // 
+            this.XuatXu.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.XuatXu.DataPropertyName = "XuatXu";
+            this.XuatXu.HeaderText = "Xuất Xứ";
+            this.XuatXu.Name = "XuatXu";
+            this.XuatXu.ReadOnly = true;
+            // 
+            // SoLuongTon
+            // 
+            this.SoLuongTon.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.SoLuongTon.DataPropertyName = "SoLuongTon";
+            this.SoLuongTon.HeaderText = "Số Lượng Tồn";
+            this.SoLuongTon.Name = "SoLuongTon";
+            this.SoLuongTon.ReadOnly = true;
+            // 
+            // KhuyenMai
+            // 
+            this.KhuyenMai.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.KhuyenMai.DataPropertyName = "KhuyenMai";
+            this.KhuyenMai.HeaderText = "Khuyến Mại";
+            this.KhuyenMai.Name = "KhuyenMai";
+            this.KhuyenMai.ReadOnly = true;
+            // 
+            // Gia
+            // 
+            this.Gia.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Gia.DataPropertyName = "Gia";
+            this.Gia.HeaderText = "Giá";
+            this.Gia.Name = "Gia";
+            this.Gia.ReadOnly = true;
+            // 
             // tabPage5
             // 
             this.tabPage5.BackColor = System.Drawing.Color.LightGray;
             this.tabPage5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.tabPage5.Controls.Add(this.button17);
-            this.tabPage5.Controls.Add(this.button18);
-            this.tabPage5.Controls.Add(this.textBox7);
+            this.tabPage5.Controls.Add(this.btn_TKKhachHang);
+            this.tabPage5.Controls.Add(this.txt_TKKhachHang);
             this.tabPage5.Controls.Add(this.label12);
             this.tabPage5.Controls.Add(this.dtGridKhachHang);
             this.tabPage5.Location = new System.Drawing.Point(4, 29);
@@ -478,21 +538,22 @@ namespace QLNhaHang
             this.button17.Text = "Xóa";
             this.button17.UseVisualStyleBackColor = true;
             // 
-            // button18
+            // btn_TKKhachHang
             // 
-            this.button18.Location = new System.Drawing.Point(37, 182);
-            this.button18.Name = "button18";
-            this.button18.Size = new System.Drawing.Size(114, 40);
-            this.button18.TabIndex = 13;
-            this.button18.Text = "Tìm Kiếm";
-            this.button18.UseVisualStyleBackColor = true;
+            this.btn_TKKhachHang.Location = new System.Drawing.Point(37, 182);
+            this.btn_TKKhachHang.Name = "btn_TKKhachHang";
+            this.btn_TKKhachHang.Size = new System.Drawing.Size(114, 40);
+            this.btn_TKKhachHang.TabIndex = 13;
+            this.btn_TKKhachHang.Text = "Tìm Kiếm";
+            this.btn_TKKhachHang.UseVisualStyleBackColor = true;
+            this.btn_TKKhachHang.Click += new System.EventHandler(this.btn_TKKhachHang_Click);
             // 
-            // textBox7
+            // txt_TKKhachHang
             // 
-            this.textBox7.Location = new System.Drawing.Point(97, 89);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(257, 27);
-            this.textBox7.TabIndex = 12;
+            this.txt_TKKhachHang.Location = new System.Drawing.Point(97, 89);
+            this.txt_TKKhachHang.Name = "txt_TKKhachHang";
+            this.txt_TKKhachHang.Size = new System.Drawing.Size(257, 27);
+            this.txt_TKKhachHang.TabIndex = 12;
             // 
             // label12
             // 
@@ -512,33 +573,12 @@ namespace QLNhaHang
             this.dtGridKhachHang.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.namekh,
             this.phone,
-            this.point});
+            this.Diem});
             this.dtGridKhachHang.Location = new System.Drawing.Point(388, 1);
             this.dtGridKhachHang.Name = "dtGridKhachHang";
             this.dtGridKhachHang.ReadOnly = true;
             this.dtGridKhachHang.Size = new System.Drawing.Size(1281, 821);
             this.dtGridKhachHang.TabIndex = 0;
-            // 
-            // namekh
-            // 
-            this.namekh.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.namekh.HeaderText = "Tên Khách Hàng";
-            this.namekh.Name = "namekh";
-            this.namekh.ReadOnly = true;
-            // 
-            // phone
-            // 
-            this.phone.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.phone.HeaderText = "Số Điện Thoại";
-            this.phone.Name = "phone";
-            this.phone.ReadOnly = true;
-            // 
-            // point
-            // 
-            this.point.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.point.HeaderText = "Điểm";
-            this.point.Name = "point";
-            this.point.ReadOnly = true;
             // 
             // tabPage6
             // 
@@ -673,60 +713,29 @@ namespace QLNhaHang
             this.tongtien.Name = "tongtien";
             this.tongtien.ReadOnly = true;
             // 
-            // IDSanPham
+            // namekh
             // 
-            this.IDSanPham.DataPropertyName = "ID";
-            this.IDSanPham.HeaderText = "ID";
-            this.IDSanPham.Name = "IDSanPham";
-            this.IDSanPham.ReadOnly = true;
+            this.namekh.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.namekh.DataPropertyName = "HoTen";
+            this.namekh.HeaderText = "Tên Khách Hàng";
+            this.namekh.Name = "namekh";
+            this.namekh.ReadOnly = true;
             // 
-            // TenSanPham
+            // phone
             // 
-            this.TenSanPham.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.TenSanPham.DataPropertyName = "TenSanPham";
-            this.TenSanPham.HeaderText = "Tên Sản Phẩm";
-            this.TenSanPham.Name = "TenSanPham";
-            this.TenSanPham.ReadOnly = true;
+            this.phone.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.phone.DataPropertyName = "SDT";
+            this.phone.HeaderText = "Số Điện Thoại";
+            this.phone.Name = "phone";
+            this.phone.ReadOnly = true;
             // 
-            // NgaySX
+            // Diem
             // 
-            this.NgaySX.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.NgaySX.DataPropertyName = "NgaySX";
-            this.NgaySX.HeaderText = "Ngày Sản Xuất";
-            this.NgaySX.Name = "NgaySX";
-            this.NgaySX.ReadOnly = true;
-            // 
-            // XuatXu
-            // 
-            this.XuatXu.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.XuatXu.DataPropertyName = "XuatXu";
-            this.XuatXu.HeaderText = "Xuất Xứ";
-            this.XuatXu.Name = "XuatXu";
-            this.XuatXu.ReadOnly = true;
-            // 
-            // SoLuongTon
-            // 
-            this.SoLuongTon.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.SoLuongTon.DataPropertyName = "SoLuongTon";
-            this.SoLuongTon.HeaderText = "Số Lượng Tồn";
-            this.SoLuongTon.Name = "SoLuongTon";
-            this.SoLuongTon.ReadOnly = true;
-            // 
-            // KhuyenMai
-            // 
-            this.KhuyenMai.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.KhuyenMai.DataPropertyName = "KhuyenMai";
-            this.KhuyenMai.HeaderText = "Khuyến Mại";
-            this.KhuyenMai.Name = "KhuyenMai";
-            this.KhuyenMai.ReadOnly = true;
-            // 
-            // Gia
-            // 
-            this.Gia.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Gia.DataPropertyName = "Gia";
-            this.Gia.HeaderText = "Giá";
-            this.Gia.Name = "Gia";
-            this.Gia.ReadOnly = true;
+            this.Diem.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Diem.DataPropertyName = "Diem";
+            this.Diem.HeaderText = "Điểm";
+            this.Diem.Name = "Diem";
+            this.Diem.ReadOnly = true;
             // 
             // Main
             // 
@@ -770,27 +779,27 @@ namespace QLNhaHang
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.Button btn_TKNhanVien;
+        private System.Windows.Forms.TextBox txt_TKNhanVien;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.DataGridView dtGridNhanVien;
         private System.Windows.Forms.DataGridView dtGridDanhMuc;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Button button11;
-        private System.Windows.Forms.Button button12;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.Button btn_TKDanhMuc;
+        private System.Windows.Forms.TextBox txt_TKDanhMuc;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.DataGridView dtGridSanPham;
         private System.Windows.Forms.Button button13;
         private System.Windows.Forms.Button button14;
         private System.Windows.Forms.Button button15;
-        private System.Windows.Forms.Button button16;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.Button btn_TKSanPham;
+        private System.Windows.Forms.TextBox txt_TKSanPham;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Button button17;
-        private System.Windows.Forms.Button button18;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.Button btn_TKKhachHang;
+        private System.Windows.Forms.TextBox txt_TKKhachHang;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.DataGridView dtGridKhachHang;
         private System.Windows.Forms.DataGridView dataGridView7;
@@ -806,9 +815,6 @@ namespace QLNhaHang
         private System.Windows.Forms.DataGridViewTextBoxColumn ngban;
         private System.Windows.Forms.DataGridViewTextBoxColumn ngayban;
         private System.Windows.Forms.DataGridViewTextBoxColumn tongtien;
-        private System.Windows.Forms.DataGridViewTextBoxColumn namekh;
-        private System.Windows.Forms.DataGridViewTextBoxColumn phone;
-        private System.Windows.Forms.DataGridViewTextBoxColumn point;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn HoTen;
         private System.Windows.Forms.DataGridViewTextBoxColumn TaiKhoan;
@@ -824,6 +830,9 @@ namespace QLNhaHang
         private System.Windows.Forms.DataGridViewTextBoxColumn SoLuongTon;
         private System.Windows.Forms.DataGridViewTextBoxColumn KhuyenMai;
         private System.Windows.Forms.DataGridViewTextBoxColumn Gia;
+        private System.Windows.Forms.DataGridViewTextBoxColumn namekh;
+        private System.Windows.Forms.DataGridViewTextBoxColumn phone;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Diem;
     }
 }
 

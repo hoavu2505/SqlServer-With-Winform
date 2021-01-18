@@ -28,7 +28,7 @@ namespace QLNhaHang
             //Thực hiện thêm dữ liệu
             if (txt_danhmuc.Text != "")
             {
-                if (connect.exedata("insert into DANHMUC (TenDanhMuc) values (N'" + txt_danhmuc.Text + "')") == true)
+                if (connect.exedata("Execute sp_adddanhmuc N'" + txt_danhmuc.Text + "'") == true)
                 {
                     DialogResult dlr = MessageBox.Show("Đã thêm dữ liệu thành công");
                     if (dlr == DialogResult.OK)
@@ -41,6 +41,11 @@ namespace QLNhaHang
             {
                 MessageBox.Show("Không thể thêm dữ liệu");
             }
+        }
+
+        private void btn_huybo_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

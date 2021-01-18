@@ -22,7 +22,10 @@ namespace QLNhaHang
 
         crud connect = new crud();
 
-        //LOAD DATA
+        int vitriNV = -1;
+        int vitriDM = -1;
+
+        //LOAD DATA Nhân Viên
         private void dataNhanVien()
         {
             DataTable dt = connect.readdata("select * from ViewDSNhanVien");
@@ -32,22 +35,73 @@ namespace QLNhaHang
             }
         }
 
+        //LOAD DATA Tìm Nhân Viên
+        private void dataTKNhanVien(string name)
+        {
+            DataTable dt = connect.readdata("select * from ft_TimKiemNV(N'" + name + "')");
+            if (dt != null)
+            {
+                dtGridNhanVien.DataSource = dt;
+            }
+        }
+
+        //LOAD DATA Danh Mục
         private void dataDanhMuc()
         {
-            DataTable dt = connect.readdata("select IDDanhMuc, TenDanhMuc from DANHMUC");
+            DataTable dt = connect.readdata("select * from ViewDanhMuc");
             if (dt != null)
             {
                 dtGridDanhMuc.DataSource = dt;
             }
         }
 
+        //LOAD DATA Tìm Danh Mục
+        private void dataTKDanhMuc(string name)
+        {
+            DataTable dt = connect.readdata("select * from fu_bangdanhmuc(N'" + name + "')");
+            if (dt != null)
+            {
+                dtGridDanhMuc.DataSource = dt;
+            }
+        }
 
+        //LOAD DATA Sản Phẩm
         private void dataSanPham()
         {
             DataTable dt = connect.readdata("select * from ViewDSSanPham");
             if (dt != null)
             {
                 dtGridSanPham.DataSource = dt;
+            }
+        }
+
+        //LOAD DATA Tìm Sản Phẩm
+        private void dataTKSanPham(string name)
+        {
+            DataTable dt = connect.readdata("select * from fu_bangsanpham(N'" + name + "')");
+            if (dt != null)
+            {
+                dtGridSanPham.DataSource = dt;
+            }
+        }
+
+        //LOAD DATA Khách Hàng
+        private void dataKhachHang()
+        {
+            DataTable dt = connect.readdata("select * from ViewDSkhachhang");
+            if (dt != null)
+            {
+                dtGridKhachHang.DataSource = dt;
+            }
+        }
+
+        //LOAD DATA Tìm Khách Hàng
+        private void dataTKKhachHang(string name)
+        {
+            DataTable dt = connect.readdata("select * from ViewDSkhachhang where HoTen = "+ name +"");
+            if (dt != null)
+            {
+                dtGridKhachHang.DataSource = dt;
             }
         }
 
@@ -58,7 +112,7 @@ namespace QLNhaHang
             dataNhanVien();
             dataDanhMuc();
             dataSanPham();
-            
+            dataKhachHang();
         }
 
         //Thêm Nhân Viên
@@ -109,5 +163,38 @@ namespace QLNhaHang
                 dtGridSanPham.DataSource = dt;
             }
         }
+
+        private void btn_TKNhanVien_Click(object sender, EventArgs e)
+        {
+            dataTKNhanVien(txt_TKNhanVien.Text.ToString());
+        }
+
+        private void btn_TKDanhMuc_Click(object sender, EventArgs e)
+        {
+            dataTKDanhMuc(txt_TKDanhMuc.Text.ToString());
+        }
+
+        private void btn_TKSanPham_Click(object sender, EventArgs e)
+        {
+            dataTKSanPham(txt_TKSanPham.Text.ToString());
+        }
+
+        private void btn_TKKhachHang_Click(object sender, EventArgs e)
+        {
+            dataTKKhachHang(txt_TKKhachHang.Text.ToString());
+        }
+
+        //Lấy chỉ số hàng
+        private void dtGridNhanVien_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            vitriNV = dtGridNhanVien.CurrentCell.RowIndex;
+        }
+
+        private void dtGridDanhMuc_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            vitriDM = dtGridDanhMuc.CurrentCell.RowIndex;
+        }
+
+        
     }
 }

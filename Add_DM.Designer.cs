@@ -33,7 +33,7 @@ namespace QLNhaHang
             this.txt_danhmuc = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btn_huybo = new System.Windows.Forms.Button();
             this.btn_themdm = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -78,15 +78,16 @@ namespace QLNhaHang
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông Tin";
             // 
-            // button2
+            // btn_huybo
             // 
-            this.button2.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(246, 179);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(98, 42);
-            this.button2.TabIndex = 25;
-            this.button2.Text = "HỦY BỎ";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btn_huybo.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_huybo.Location = new System.Drawing.Point(246, 179);
+            this.btn_huybo.Name = "btn_huybo";
+            this.btn_huybo.Size = new System.Drawing.Size(98, 42);
+            this.btn_huybo.TabIndex = 25;
+            this.btn_huybo.Text = "HỦY BỎ";
+            this.btn_huybo.UseVisualStyleBackColor = true;
+            this.btn_huybo.Click += new System.EventHandler(this.btn_huybo_Click);
             // 
             // btn_themdm
             // 
@@ -104,7 +105,7 @@ namespace QLNhaHang
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(396, 234);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btn_huybo);
             this.Controls.Add(this.btn_themdm);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
@@ -126,7 +127,7 @@ namespace QLNhaHang
         private System.Windows.Forms.TextBox txt_danhmuc;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btn_huybo;
         private System.Windows.Forms.Button btn_themdm;
     }
 }
