@@ -160,6 +160,7 @@ namespace QLNhaHang
                 dtGridHoaDonBanHang.DataSource = dt;
                 txt_TienKhachTra.Text = "0";
                 txt_TienGiaLai.Text = "0";
+                txt_TongTien.Text = "0";
                 txt_SDT.Text = "";
                 txt_HoTen.Text = "";
             }
