@@ -75,6 +75,10 @@ namespace QLNhaHang
             this.txt_TKKhachHang = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.dtGridKhachHang = new System.Windows.Forms.DataGridView();
+            this.IDKhach = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.namekh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Diem = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage6 = new System.Windows.Forms.TabPage();
             this.btn_TimKiemHoaDon = new System.Windows.Forms.Button();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
@@ -89,10 +93,6 @@ namespace QLNhaHang
             this.ngban = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ngayban = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tongtien = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.IDKhach = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.namekh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Diem = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tablecontrol.SuspendLayout();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtGridNhanVien)).BeginInit();
@@ -397,6 +397,7 @@ namespace QLNhaHang
             this.btn_XoaSP.TabIndex = 12;
             this.btn_XoaSP.Text = "Xóa";
             this.btn_XoaSP.UseVisualStyleBackColor = true;
+            this.btn_XoaSP.Click += new System.EventHandler(this.btn_XoaSP_Click);
             // 
             // button14
             // 
@@ -592,6 +593,39 @@ namespace QLNhaHang
             this.dtGridKhachHang.TabIndex = 0;
             this.dtGridKhachHang.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtGridKhachHang_CellClick);
             // 
+            // IDKhach
+            // 
+            this.IDKhach.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.IDKhach.DataPropertyName = "IDKhach";
+            this.IDKhach.HeaderText = "ID Khách Hàng";
+            this.IDKhach.Name = "IDKhach";
+            this.IDKhach.ReadOnly = true;
+            this.IDKhach.Width = 124;
+            // 
+            // namekh
+            // 
+            this.namekh.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.namekh.DataPropertyName = "HoTen";
+            this.namekh.HeaderText = "Tên Khách Hàng";
+            this.namekh.Name = "namekh";
+            this.namekh.ReadOnly = true;
+            // 
+            // phone
+            // 
+            this.phone.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.phone.DataPropertyName = "SDT";
+            this.phone.HeaderText = "Số Điện Thoại";
+            this.phone.Name = "phone";
+            this.phone.ReadOnly = true;
+            // 
+            // Diem
+            // 
+            this.Diem.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Diem.DataPropertyName = "Diem";
+            this.Diem.HeaderText = "Điểm";
+            this.Diem.Name = "Diem";
+            this.Diem.ReadOnly = true;
+            // 
             // tabPage6
             // 
             this.tabPage6.BackColor = System.Drawing.Color.LightGray;
@@ -731,39 +765,6 @@ namespace QLNhaHang
             this.tongtien.HeaderText = "Tổng Tiền";
             this.tongtien.Name = "tongtien";
             this.tongtien.ReadOnly = true;
-            // 
-            // IDKhach
-            // 
-            this.IDKhach.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.IDKhach.DataPropertyName = "IDKhach";
-            this.IDKhach.HeaderText = "ID Khách Hàng";
-            this.IDKhach.Name = "IDKhach";
-            this.IDKhach.ReadOnly = true;
-            this.IDKhach.Width = 136;
-            // 
-            // namekh
-            // 
-            this.namekh.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.namekh.DataPropertyName = "HoTen";
-            this.namekh.HeaderText = "Tên Khách Hàng";
-            this.namekh.Name = "namekh";
-            this.namekh.ReadOnly = true;
-            // 
-            // phone
-            // 
-            this.phone.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.phone.DataPropertyName = "SDT";
-            this.phone.HeaderText = "Số Điện Thoại";
-            this.phone.Name = "phone";
-            this.phone.ReadOnly = true;
-            // 
-            // Diem
-            // 
-            this.Diem.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Diem.DataPropertyName = "Diem";
-            this.Diem.HeaderText = "Điểm";
-            this.Diem.Name = "Diem";
-            this.Diem.ReadOnly = true;
             // 
             // Main
             // 

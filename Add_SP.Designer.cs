@@ -259,6 +259,8 @@ namespace QLNhaHang
             this.cb_danhmuc.Name = "cb_danhmuc";
             this.cb_danhmuc.Size = new System.Drawing.Size(181, 25);
             this.cb_danhmuc.TabIndex = 20;
+            this.cb_danhmuc.ValueMember = "IDDanhMuc";
+            this.cb_danhmuc.SelectedIndexChanged += new System.EventHandler(this.cb_danhmuc_SelectedIndexChanged);
             // 
             // label6
             // 

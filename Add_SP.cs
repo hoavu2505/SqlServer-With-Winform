@@ -24,29 +24,15 @@ namespace QLNhaHang
          //Hàm đổ dữ liệu vào ComboBox
         private void dataDanhmuc()
         {
-            DataTable dt = connect.readdata("select TenDanhMuc from DANHMUC");
-            if (dt != null)
-            {
-                cb_danhmuc.DataSource = dt;
-            }
-        }
-
-        //Lấy ID Danh Mục
-        private string getID (string TenDanhMuc)
-        {
-            string id = "";
-            SqlCommand cmd = new SqlCommand("SELECT IDDanhMuc from DANHMUC where TenDanhMuc = N'"+TenDanhMuc+"'");
-            SqlDataAdapter da = new SqlDataAdapter(cmd); //Chuyển dữ liệu về
-            DataTable dt = new DataTable(); //Tạo kho ảo lưu trữ dữ liệu
-            da.Fill(dt); //Đổ dữ liệu vào kho
+            DataTable dt = connect.readdata("select * from DANHMUC");
             if (dt != null)
             {
                 foreach (DataRow dr in dt.Rows)
                 {
-                    id = dr["ChucVu"].ToString();
+                    dr["TenDanhMuc"] = dr["TenDanhMuc"].ToString().Trim();
                 }
+                cb_danhmuc.DataSource = dt;
             }
-            return id;
         }
 
         private void Add_SP_Load(object sender, EventArgs e)
@@ -59,16 +45,13 @@ namespace QLNhaHang
             this.Close();
         }
 
-        public static string ID_DM = "";
+        int iddm = -1;
+
         private void btn_addsp_Click(object sender, EventArgs e)
         {
-            ID_DM = getID(cb_danhmuc.Text);
-            MessageBox.Show(ID_DM);
-
-            /*
             if (txt_masp.Text != "" || txt_tensp.Text != "")
             {
-                if (connect.exedata("insert into MATHANG (IDSanPham, TenSanPham, NgaySX, XuatXu, SoLuongTon, Gia, KhuyenMai, IDDanhMuc) values ()") == true)
+                if (connect.exedata("insert into MATHANG (IDSanPham, TenSanPham, NgaySX, XuatXu, SoLuongTon, Gia, KhuyenMai, IDDanhMuc) values ('" + txt_masp.Text.ToString() + "', N'" + txt_tensp.Text.ToString() + "', '" + dtp_ngaysx.Value.Date.ToString("yyyy-MM-dd") + "', N'" + txt_xuatxu.Text.ToString() + "', " + Convert.ToInt32(nb_soluong.Value.ToString()) + ", " + Convert.ToInt32(txt_dongia.Text.ToString()) + ", " + Convert.ToInt32(txt_khuyenmai.Text.ToString()) + ", " + iddm + ")") == true)
                 {
                     DialogResult dlr = MessageBox.Show("Đã thêm dữ liệu thành công");
                     if (dlr == DialogResult.OK)
@@ -81,7 +64,11 @@ namespace QLNhaHang
             {
                 MessageBox.Show("Không thể thêm dữ liệu");
             }
-            */
+        }
+
+        private void cb_danhmuc_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            iddm = Convert.ToInt32(cb_danhmuc.SelectedValue.ToString());
         }
     }
 }

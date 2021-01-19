@@ -226,12 +226,15 @@ namespace QLNhaHang
             // 
             // cb_danhmuc
             // 
+            this.cb_danhmuc.DisplayMember = "TenDanhMuc";
             this.cb_danhmuc.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cb_danhmuc.FormattingEnabled = true;
             this.cb_danhmuc.Location = new System.Drawing.Point(141, 161);
             this.cb_danhmuc.Name = "cb_danhmuc";
             this.cb_danhmuc.Size = new System.Drawing.Size(244, 25);
             this.cb_danhmuc.TabIndex = 5;
+            this.cb_danhmuc.ValueMember = "IDDanhMuc";
+            this.cb_danhmuc.SelectedIndexChanged += new System.EventHandler(this.cb_danhmuc_SelectedIndexChanged);
             // 
             // label7
             // 

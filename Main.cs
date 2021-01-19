@@ -25,6 +25,7 @@ namespace QLNhaHang
         int vitriNV = -1;
         int vitriDM = -1;
         int vitriKH = -1;
+        string vitriSP = "";
 
         //LOAD DATA Nhân Viên
         private void dataNhanVien()
@@ -225,13 +226,33 @@ namespace QLNhaHang
         //Edit Sản Phẩm
         private void button14_Click(object sender, EventArgs e)
         {
-            Edit_SP editsp = new Edit_SP();
+            Edit_SP editsp = new Edit_SP(vitriSP);
             editsp.ShowDialog();
             DataTable dt = connect.readdata("select * from ViewDSSanPham");
             if (dt != null)
             {
                 dtGridSanPham.DataSource = dt;
             }
+
+        }
+
+        //Xóa Sản Phẩm
+        private void btn_XoaSP_Click(object sender, EventArgs e)
+        {
+            
+            if (connect.exedata("Delete from MATHANG where IDSanPham = N'" + vitriSP + "' ") == true)
+            {
+                DialogResult dlr = MessageBox.Show("Đã xóa thành công");
+                if (dlr == DialogResult.OK)
+                {
+                    DataTable dt = connect.readdata("select * from ViewDSSanPham");
+                    if (dt != null)
+                    {
+                        dtGridSanPham.DataSource = dt;
+                    }
+                }
+            }
+            
         }
 
         //Xóa Khách Hàng
@@ -254,22 +275,50 @@ namespace QLNhaHang
         //Tìm Kiếm
         private void btn_TKNhanVien_Click(object sender, EventArgs e)
         {
-            dataTKNhanVien(txt_TKNhanVien.Text.ToString());
+            if(txt_TKNhanVien.Text != "")
+            {
+                dataTKNhanVien(txt_TKNhanVien.Text.ToString());
+            }
+            else
+            {
+                MessageBox.Show("Hãy nhập tên cần tìm vào ô tìm kiếm.");
+            }
         }
 
         private void btn_TKDanhMuc_Click(object sender, EventArgs e)
         {
-            dataTKDanhMuc(txt_TKDanhMuc.Text.ToString());
+            if(txt_TKDanhMuc.Text != "")
+            {
+                dataTKDanhMuc(txt_TKDanhMuc.Text.ToString());
+            }
+            else
+            {
+                MessageBox.Show("Hãy nhập tên danh mục cần tìm vào ô tìm kiếm.");
+            }
         }
 
         private void btn_TKSanPham_Click(object sender, EventArgs e)
         {
-            dataTKSanPham(txt_TKSanPham.Text.ToString());
+            if(txt_TKSanPham.Text != "")
+            {
+                dataTKSanPham(txt_TKSanPham.Text.ToString());
+            }
+            else
+            {
+                MessageBox.Show("Hãy nhập tên sản phẩm cần tìm vào ô tìm kiếm.");
+            }
         }
 
         private void btn_TKKhachHang_Click(object sender, EventArgs e)
         {
-            dataTKKhachHang(txt_TKKhachHang.Text.ToString());
+            if(txt_TKKhachHang.Text != "")
+            {
+                dataTKKhachHang(txt_TKKhachHang.Text.ToString());
+            }
+            else
+            {
+                MessageBox.Show("Hãy nhập tên khách hàng cần tìm vào ô tìm kiếm.");
+            }
         }
 
         private void btn_TimKiemHoaDon_Click(object sender, EventArgs e)
@@ -292,7 +341,7 @@ namespace QLNhaHang
 
         private void dtGridSanPham_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            vitriSP = dtGridSanPham.CurrentCell.Value.ToString();
         }
 
         private void dtGridKhachHang_CellClick(object sender, DataGridViewCellEventArgs e)

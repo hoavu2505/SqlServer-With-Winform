@@ -48,8 +48,8 @@ namespace QLNhaHang
             this.txt_DonGia = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.txt_KhuyenMai = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btn_HuyBo = new System.Windows.Forms.Button();
+            this.btn_EditSP = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -71,12 +71,15 @@ namespace QLNhaHang
             // 
             // cb_DanhMuc
             // 
+            this.cb_DanhMuc.DisplayMember = "TenDanhMuc";
             this.cb_DanhMuc.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cb_DanhMuc.FormattingEnabled = true;
             this.cb_DanhMuc.Location = new System.Drawing.Point(130, 41);
             this.cb_DanhMuc.Name = "cb_DanhMuc";
             this.cb_DanhMuc.Size = new System.Drawing.Size(181, 25);
             this.cb_DanhMuc.TabIndex = 20;
+            this.cb_DanhMuc.ValueMember = "IDDanhMuc";
+            this.cb_DanhMuc.SelectedIndexChanged += new System.EventHandler(this.cb_DanhMuc_SelectedIndexChanged);
             // 
             // label6
             // 
@@ -247,27 +250,28 @@ namespace QLNhaHang
             this.txt_KhuyenMai.Name = "txt_KhuyenMai";
             this.txt_KhuyenMai.Size = new System.Drawing.Size(181, 25);
             this.txt_KhuyenMai.TabIndex = 20;
-            this.txt_KhuyenMai.UseSystemPasswordChar = true;
             // 
-            // button2
+            // btn_HuyBo
             // 
-            this.button2.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(756, 385);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(98, 42);
-            this.button2.TabIndex = 36;
-            this.button2.Text = "HỦY BỎ";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btn_HuyBo.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_HuyBo.Location = new System.Drawing.Point(756, 385);
+            this.btn_HuyBo.Name = "btn_HuyBo";
+            this.btn_HuyBo.Size = new System.Drawing.Size(98, 42);
+            this.btn_HuyBo.TabIndex = 36;
+            this.btn_HuyBo.Text = "HỦY BỎ";
+            this.btn_HuyBo.UseVisualStyleBackColor = true;
+            this.btn_HuyBo.Click += new System.EventHandler(this.btn_HuyBo_Click);
             // 
-            // button1
+            // btn_EditSP
             // 
-            this.button1.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(529, 385);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(98, 42);
-            this.button1.TabIndex = 35;
-            this.button1.Text = "SỬA";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btn_EditSP.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_EditSP.Location = new System.Drawing.Point(529, 385);
+            this.btn_EditSP.Name = "btn_EditSP";
+            this.btn_EditSP.Size = new System.Drawing.Size(98, 42);
+            this.btn_EditSP.TabIndex = 35;
+            this.btn_EditSP.Text = "SỬA";
+            this.btn_EditSP.UseVisualStyleBackColor = true;
+            this.btn_EditSP.Click += new System.EventHandler(this.btn_EditSP_Click);
             // 
             // label1
             // 
@@ -287,11 +291,12 @@ namespace QLNhaHang
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btn_HuyBo);
+            this.Controls.Add(this.btn_EditSP);
             this.Controls.Add(this.label1);
             this.Name = "Edit_SP";
             this.Text = "Edit_SP";
+            this.Load += new System.EventHandler(this.Edit_SP_Load);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -325,8 +330,8 @@ namespace QLNhaHang
         private System.Windows.Forms.TextBox txt_DonGia;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox txt_KhuyenMai;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_HuyBo;
+        private System.Windows.Forms.Button btn_EditSP;
         private System.Windows.Forms.Label label1;
     }
 }

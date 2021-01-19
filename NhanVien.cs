@@ -40,6 +40,28 @@ namespace QLNhaHang
             }
         }
 
+        private void dataDanhMuc()
+        {
+            DataTable dt = connect.readdata("select * from DANHMUC");
+            if (dt != null)
+            {
+                foreach (DataRow dr in dt.Rows)
+                {
+                    dr["TenDanhMuc"] = dr["TenDanhMuc"].ToString().Trim();
+                }
+                cb_danhmuc.DataSource = dt;
+            }
+        }
+
+        private void dataChonSanPhamTheoDanhMuc()
+        {
+            DataTable dt = connect.readdata("select IDSanPham, TenSanPham, Gia from MATHANG where IDDanhMuc = " + Convert.ToInt32(cb_danhmuc.SelectedValue.ToString()));
+            if (dt != null)
+            {
+                dtGridChonSanPham.DataSource = dt;
+            }
+        }
+
         private void dataHoaDonBanHang()
         {
             DataTable dt = connect.readdata("Select * from HoaDonBanHang");
@@ -64,6 +86,7 @@ namespace QLNhaHang
         private void NhanVien_Load(object sender, EventArgs e)
         {
             dataChonSanPham();
+            dataDanhMuc();
         }
 
         int vitri1 = -1;
@@ -132,12 +155,14 @@ namespace QLNhaHang
                 {
                     connect.exedata("Execute sp_CapNhatHoaDon " + idhoadon);
                     dataHoaDonBanHang();
+                    txt_TienGiaLai.Text = (Convert.ToInt32(txt_TienKhachTra.Text.ToString()) - Convert.ToInt32(txt_TongTien.Text.ToString())).ToString();
                 }
                 else
                 {
                     connect.exedata("Delete from HOADON where IDHoaDon = " + idhoadon);
                     dtGridHoaDonBanHang.Rows.RemoveAt(vitri2);
                     txt_TongTien.Text = "0";
+                    txt_TienGiaLai.Text = (Convert.ToInt32(txt_TienKhachTra.Text.ToString()) - Convert.ToInt32(txt_TongTien.Text.ToString())).ToString();
                 }
             }
         }
@@ -250,6 +275,11 @@ namespace QLNhaHang
             {
                 MessageBox.Show("Hãy nhập Số điện thoại");
             }
+        }
+
+        private void cb_danhmuc_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            dataChonSanPhamTheoDanhMuc();
         }
     }
 }
