@@ -39,7 +39,7 @@ namespace QLNhaHang
             //Thực hiện thêm dữ liệu
             if (txt_hoten.Text != "" || txt_taikhoan.Text != "" || txt_matkhau.Text != "" || cb_chucvu.Text != "" || cb_calamviec.Text != "")
             {
-                if (connect.exedata("execute sp_AddNhanVien N'" + txt_hoten.Text + "', N'" + dtp_ngaysinh.Value + "', N'" + gt + "', N'" + txt_diachi.Text + "', N'" + txt_sdt.Text + "', N'" + dtp_ngaylamviec.Value + "', "+ cb_calamviec.SelectedItem +", N'" + txt_taikhoan.Text + "', N'" + txt_matkhau.Text + "', N'" + cb_chucvu.Text + "'") == true)
+                if (connect.exedata("execute sp_AddNhanVien N'" + txt_hoten.Text + "', N'" + dtp_ngaysinh.Value.Date.ToString("yyyy-MM-dd") + "', N'" + gt + "', N'" + txt_diachi.Text + "', N'" + txt_sdt.Text + "', N'" + dtp_ngaylamviec.Value.Date.ToString("yyyy-MM-dd") + "', "+ Convert.ToInt32(cb_calamviec.Text.Trim().ToString()) + ", N'" + txt_taikhoan.Text + "', N'" + txt_matkhau.Text + "', N'" + cb_chucvu.Text + "'") == true)
                 {
                     DialogResult dlr = MessageBox.Show("Đã thêm dữ liệu thành công");
                     if (dlr == DialogResult.OK)

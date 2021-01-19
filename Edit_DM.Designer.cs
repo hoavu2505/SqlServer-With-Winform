@@ -29,38 +29,40 @@ namespace QLNhaHang
         /// </summary>
         private void InitializeComponent()
         {
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btn_HuyBo = new System.Windows.Forms.Button();
+            this.btn_SuaDanhMuc = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txt_TenDanhMuc = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // button2
+            // btn_HuyBo
             // 
-            this.button2.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(248, 176);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(98, 42);
-            this.button2.TabIndex = 29;
-            this.button2.Text = "HỦY BỎ";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btn_HuyBo.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_HuyBo.Location = new System.Drawing.Point(248, 176);
+            this.btn_HuyBo.Name = "btn_HuyBo";
+            this.btn_HuyBo.Size = new System.Drawing.Size(98, 42);
+            this.btn_HuyBo.TabIndex = 29;
+            this.btn_HuyBo.Text = "HỦY BỎ";
+            this.btn_HuyBo.UseVisualStyleBackColor = true;
+            this.btn_HuyBo.Click += new System.EventHandler(this.btn_HuyBo_Click);
             // 
-            // button1
+            // btn_SuaDanhMuc
             // 
-            this.button1.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(51, 176);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(98, 42);
-            this.button1.TabIndex = 28;
-            this.button1.Text = "SỬA";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btn_SuaDanhMuc.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_SuaDanhMuc.Location = new System.Drawing.Point(51, 176);
+            this.btn_SuaDanhMuc.Name = "btn_SuaDanhMuc";
+            this.btn_SuaDanhMuc.Size = new System.Drawing.Size(98, 42);
+            this.btn_SuaDanhMuc.TabIndex = 28;
+            this.btn_SuaDanhMuc.Text = "SỬA";
+            this.btn_SuaDanhMuc.UseVisualStyleBackColor = true;
+            this.btn_SuaDanhMuc.Click += new System.EventHandler(this.btn_SuaDanhMuc_Click);
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.txt_TenDanhMuc);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(19, 65);
@@ -70,13 +72,13 @@ namespace QLNhaHang
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông Tin";
             // 
-            // textBox1
+            // txt_TenDanhMuc
             // 
-            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(171, 43);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(181, 25);
-            this.textBox1.TabIndex = 7;
+            this.txt_TenDanhMuc.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_TenDanhMuc.Location = new System.Drawing.Point(171, 43);
+            this.txt_TenDanhMuc.Name = "txt_TenDanhMuc";
+            this.txt_TenDanhMuc.Size = new System.Drawing.Size(181, 25);
+            this.txt_TenDanhMuc.TabIndex = 7;
             // 
             // label2
             // 
@@ -103,8 +105,8 @@ namespace QLNhaHang
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(396, 234);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btn_HuyBo);
+            this.Controls.Add(this.btn_SuaDanhMuc);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
             this.MaximizeBox = false;
@@ -121,10 +123,10 @@ namespace QLNhaHang
 
         #endregion
 
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_HuyBo;
+        private System.Windows.Forms.Button btn_SuaDanhMuc;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txt_TenDanhMuc;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
     }

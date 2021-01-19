@@ -31,7 +31,7 @@ namespace QLNhaHang
         {
             this.tablecontrol = new System.Windows.Forms.TabControl();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.button8 = new System.Windows.Forms.Button();
+            this.btn_XoaNV = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.btn_TKNhanVien = new System.Windows.Forms.Button();
@@ -45,7 +45,7 @@ namespace QLNhaHang
             this.ChucVu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CaLamViec = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.button9 = new System.Windows.Forms.Button();
+            this.btn_XoaDM = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
             this.btn_TKDanhMuc = new System.Windows.Forms.Button();
@@ -55,7 +55,7 @@ namespace QLNhaHang
             this.IDDanhMuc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenDanhMuc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.button13 = new System.Windows.Forms.Button();
+            this.btn_XoaSP = new System.Windows.Forms.Button();
             this.button14 = new System.Windows.Forms.Button();
             this.button15 = new System.Windows.Forms.Button();
             this.btn_TKSanPham = new System.Windows.Forms.Button();
@@ -70,25 +70,26 @@ namespace QLNhaHang
             this.KhuyenMai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Gia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage5 = new System.Windows.Forms.TabPage();
-            this.button17 = new System.Windows.Forms.Button();
+            this.btn_XoaKH = new System.Windows.Forms.Button();
             this.btn_TKKhachHang = new System.Windows.Forms.Button();
             this.txt_TKKhachHang = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.dtGridKhachHang = new System.Windows.Forms.DataGridView();
             this.tabPage6 = new System.Windows.Forms.TabPage();
-            this.button19 = new System.Windows.Forms.Button();
+            this.btn_TimKiemHoaDon = new System.Windows.Forms.Button();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label15 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.dataGridView7 = new System.Windows.Forms.DataGridView();
+            this.dtGridLichSuHoaDon = new System.Windows.Forms.DataGridView();
             this.mahd = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tenkh = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sdt = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ngban = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ngayban = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tongtien = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IDKhach = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.namekh = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Diem = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -102,7 +103,7 @@ namespace QLNhaHang
             this.tabPage5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtGridKhachHang)).BeginInit();
             this.tabPage6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtGridLichSuHoaDon)).BeginInit();
             this.SuspendLayout();
             // 
             // tablecontrol
@@ -126,7 +127,7 @@ namespace QLNhaHang
             // 
             this.tabPage2.BackColor = System.Drawing.Color.LightGray;
             this.tabPage2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.tabPage2.Controls.Add(this.button8);
+            this.tabPage2.Controls.Add(this.btn_XoaNV);
             this.tabPage2.Controls.Add(this.button7);
             this.tabPage2.Controls.Add(this.button6);
             this.tabPage2.Controls.Add(this.btn_TKNhanVien);
@@ -140,14 +141,15 @@ namespace QLNhaHang
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Quản lý nhân viên";
             // 
-            // button8
+            // btn_XoaNV
             // 
-            this.button8.Location = new System.Drawing.Point(240, 262);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(114, 40);
-            this.button8.TabIndex = 6;
-            this.button8.Text = "Xóa";
-            this.button8.UseVisualStyleBackColor = true;
+            this.btn_XoaNV.Location = new System.Drawing.Point(240, 262);
+            this.btn_XoaNV.Name = "btn_XoaNV";
+            this.btn_XoaNV.Size = new System.Drawing.Size(114, 40);
+            this.btn_XoaNV.TabIndex = 6;
+            this.btn_XoaNV.Text = "Xóa";
+            this.btn_XoaNV.UseVisualStyleBackColor = true;
+            this.btn_XoaNV.Click += new System.EventHandler(this.btn_XoaNV_Click);
             // 
             // button7
             // 
@@ -185,6 +187,7 @@ namespace QLNhaHang
             this.txt_TKNhanVien.Name = "txt_TKNhanVien";
             this.txt_TKNhanVien.Size = new System.Drawing.Size(257, 27);
             this.txt_TKNhanVien.TabIndex = 2;
+            this.txt_TKNhanVien.TextChanged += new System.EventHandler(this.txt_TKNhanVien_TextChanged);
             // 
             // label9
             // 
@@ -266,7 +269,7 @@ namespace QLNhaHang
             // 
             this.tabPage3.BackColor = System.Drawing.Color.LightGray;
             this.tabPage3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.tabPage3.Controls.Add(this.button9);
+            this.tabPage3.Controls.Add(this.btn_XoaDM);
             this.tabPage3.Controls.Add(this.button10);
             this.tabPage3.Controls.Add(this.button11);
             this.tabPage3.Controls.Add(this.btn_TKDanhMuc);
@@ -280,14 +283,15 @@ namespace QLNhaHang
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Danh mục";
             // 
-            // button9
+            // btn_XoaDM
             // 
-            this.button9.Location = new System.Drawing.Point(240, 262);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(114, 40);
-            this.button9.TabIndex = 12;
-            this.button9.Text = "Xóa";
-            this.button9.UseVisualStyleBackColor = true;
+            this.btn_XoaDM.Location = new System.Drawing.Point(240, 262);
+            this.btn_XoaDM.Name = "btn_XoaDM";
+            this.btn_XoaDM.Size = new System.Drawing.Size(114, 40);
+            this.btn_XoaDM.TabIndex = 12;
+            this.btn_XoaDM.Text = "Xóa";
+            this.btn_XoaDM.UseVisualStyleBackColor = true;
+            this.btn_XoaDM.Click += new System.EventHandler(this.btn_XoaDM_Click);
             // 
             // button10
             // 
@@ -325,6 +329,7 @@ namespace QLNhaHang
             this.txt_TKDanhMuc.Name = "txt_TKDanhMuc";
             this.txt_TKDanhMuc.Size = new System.Drawing.Size(257, 27);
             this.txt_TKDanhMuc.TabIndex = 8;
+            this.txt_TKDanhMuc.TextChanged += new System.EventHandler(this.txt_TKDanhMuc_TextChanged);
             // 
             // label10
             // 
@@ -370,7 +375,7 @@ namespace QLNhaHang
             // 
             this.tabPage4.BackColor = System.Drawing.Color.LightGray;
             this.tabPage4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.tabPage4.Controls.Add(this.button13);
+            this.tabPage4.Controls.Add(this.btn_XoaSP);
             this.tabPage4.Controls.Add(this.button14);
             this.tabPage4.Controls.Add(this.button15);
             this.tabPage4.Controls.Add(this.btn_TKSanPham);
@@ -384,14 +389,14 @@ namespace QLNhaHang
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Sản phẩm";
             // 
-            // button13
+            // btn_XoaSP
             // 
-            this.button13.Location = new System.Drawing.Point(240, 262);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(114, 40);
-            this.button13.TabIndex = 12;
-            this.button13.Text = "Xóa";
-            this.button13.UseVisualStyleBackColor = true;
+            this.btn_XoaSP.Location = new System.Drawing.Point(240, 262);
+            this.btn_XoaSP.Name = "btn_XoaSP";
+            this.btn_XoaSP.Size = new System.Drawing.Size(114, 40);
+            this.btn_XoaSP.TabIndex = 12;
+            this.btn_XoaSP.Text = "Xóa";
+            this.btn_XoaSP.UseVisualStyleBackColor = true;
             // 
             // button14
             // 
@@ -401,6 +406,7 @@ namespace QLNhaHang
             this.button14.TabIndex = 11;
             this.button14.Text = "Sửa";
             this.button14.UseVisualStyleBackColor = true;
+            this.button14.Click += new System.EventHandler(this.button14_Click);
             // 
             // button15
             // 
@@ -428,6 +434,7 @@ namespace QLNhaHang
             this.txt_TKSanPham.Name = "txt_TKSanPham";
             this.txt_TKSanPham.Size = new System.Drawing.Size(257, 27);
             this.txt_TKSanPham.TabIndex = 8;
+            this.txt_TKSanPham.TextChanged += new System.EventHandler(this.txt_TKSanPham_TextChanged);
             // 
             // label11
             // 
@@ -457,6 +464,7 @@ namespace QLNhaHang
             this.dtGridSanPham.ReadOnly = true;
             this.dtGridSanPham.Size = new System.Drawing.Size(1281, 821);
             this.dtGridSanPham.TabIndex = 0;
+            this.dtGridSanPham.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtGridSanPham_CellClick);
             // 
             // IDSanPham
             // 
@@ -517,7 +525,7 @@ namespace QLNhaHang
             // 
             this.tabPage5.BackColor = System.Drawing.Color.LightGray;
             this.tabPage5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.tabPage5.Controls.Add(this.button17);
+            this.tabPage5.Controls.Add(this.btn_XoaKH);
             this.tabPage5.Controls.Add(this.btn_TKKhachHang);
             this.tabPage5.Controls.Add(this.txt_TKKhachHang);
             this.tabPage5.Controls.Add(this.label12);
@@ -529,14 +537,15 @@ namespace QLNhaHang
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "Khách hàng";
             // 
-            // button17
+            // btn_XoaKH
             // 
-            this.button17.Location = new System.Drawing.Point(240, 182);
-            this.button17.Name = "button17";
-            this.button17.Size = new System.Drawing.Size(114, 40);
-            this.button17.TabIndex = 14;
-            this.button17.Text = "Xóa";
-            this.button17.UseVisualStyleBackColor = true;
+            this.btn_XoaKH.Location = new System.Drawing.Point(240, 182);
+            this.btn_XoaKH.Name = "btn_XoaKH";
+            this.btn_XoaKH.Size = new System.Drawing.Size(114, 40);
+            this.btn_XoaKH.TabIndex = 14;
+            this.btn_XoaKH.Text = "Xóa";
+            this.btn_XoaKH.UseVisualStyleBackColor = true;
+            this.btn_XoaKH.Click += new System.EventHandler(this.btn_XoaKH_Click);
             // 
             // btn_TKKhachHang
             // 
@@ -554,6 +563,7 @@ namespace QLNhaHang
             this.txt_TKKhachHang.Name = "txt_TKKhachHang";
             this.txt_TKKhachHang.Size = new System.Drawing.Size(257, 27);
             this.txt_TKKhachHang.TabIndex = 12;
+            this.txt_TKKhachHang.TextChanged += new System.EventHandler(this.txt_TKKhachHang_TextChanged);
             // 
             // label12
             // 
@@ -571,6 +581,7 @@ namespace QLNhaHang
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dtGridKhachHang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtGridKhachHang.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.IDKhach,
             this.namekh,
             this.phone,
             this.Diem});
@@ -579,18 +590,19 @@ namespace QLNhaHang
             this.dtGridKhachHang.ReadOnly = true;
             this.dtGridKhachHang.Size = new System.Drawing.Size(1281, 821);
             this.dtGridKhachHang.TabIndex = 0;
+            this.dtGridKhachHang.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtGridKhachHang_CellClick);
             // 
             // tabPage6
             // 
             this.tabPage6.BackColor = System.Drawing.Color.LightGray;
             this.tabPage6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.tabPage6.Controls.Add(this.button19);
+            this.tabPage6.Controls.Add(this.btn_TimKiemHoaDon);
             this.tabPage6.Controls.Add(this.dateTimePicker2);
             this.tabPage6.Controls.Add(this.dateTimePicker1);
             this.tabPage6.Controls.Add(this.label15);
             this.tabPage6.Controls.Add(this.label14);
             this.tabPage6.Controls.Add(this.label13);
-            this.tabPage6.Controls.Add(this.dataGridView7);
+            this.tabPage6.Controls.Add(this.dtGridLichSuHoaDon);
             this.tabPage6.Location = new System.Drawing.Point(4, 29);
             this.tabPage6.Name = "tabPage6";
             this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
@@ -598,14 +610,15 @@ namespace QLNhaHang
             this.tabPage6.TabIndex = 5;
             this.tabPage6.Text = "Lịch sử hóa đơn";
             // 
-            // button19
+            // btn_TimKiemHoaDon
             // 
-            this.button19.Location = new System.Drawing.Point(785, 150);
-            this.button19.Name = "button19";
-            this.button19.Size = new System.Drawing.Size(102, 32);
-            this.button19.TabIndex = 6;
-            this.button19.Text = "TÌM KIẾM";
-            this.button19.UseVisualStyleBackColor = true;
+            this.btn_TimKiemHoaDon.Location = new System.Drawing.Point(785, 150);
+            this.btn_TimKiemHoaDon.Name = "btn_TimKiemHoaDon";
+            this.btn_TimKiemHoaDon.Size = new System.Drawing.Size(102, 32);
+            this.btn_TimKiemHoaDon.TabIndex = 6;
+            this.btn_TimKiemHoaDon.Text = "TÌM KIẾM";
+            this.btn_TimKiemHoaDon.UseVisualStyleBackColor = true;
+            this.btn_TimKiemHoaDon.Click += new System.EventHandler(this.btn_TimKiemHoaDon_Click);
             // 
             // dateTimePicker2
             // 
@@ -652,28 +665,29 @@ namespace QLNhaHang
             this.label13.TabIndex = 1;
             this.label13.Text = "TÌM KIẾM";
             // 
-            // dataGridView7
+            // dtGridLichSuHoaDon
             // 
-            this.dataGridView7.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dtGridLichSuHoaDon.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView7.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView7.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dtGridLichSuHoaDon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtGridLichSuHoaDon.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.mahd,
             this.tenkh,
             this.sdt,
             this.ngban,
             this.ngayban,
             this.tongtien});
-            this.dataGridView7.Location = new System.Drawing.Point(2, 199);
-            this.dataGridView7.Name = "dataGridView7";
-            this.dataGridView7.ReadOnly = true;
-            this.dataGridView7.Size = new System.Drawing.Size(1667, 623);
-            this.dataGridView7.TabIndex = 0;
+            this.dtGridLichSuHoaDon.Location = new System.Drawing.Point(2, 199);
+            this.dtGridLichSuHoaDon.Name = "dtGridLichSuHoaDon";
+            this.dtGridLichSuHoaDon.ReadOnly = true;
+            this.dtGridLichSuHoaDon.Size = new System.Drawing.Size(1667, 623);
+            this.dtGridLichSuHoaDon.TabIndex = 0;
             // 
             // mahd
             // 
             this.mahd.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.mahd.DataPropertyName = "ID";
             this.mahd.HeaderText = "Mã Hóa Đơn";
             this.mahd.Name = "mahd";
             this.mahd.ReadOnly = true;
@@ -681,6 +695,7 @@ namespace QLNhaHang
             // tenkh
             // 
             this.tenkh.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.tenkh.DataPropertyName = "TenKhach";
             this.tenkh.HeaderText = "Tên Khách Hàng";
             this.tenkh.Name = "tenkh";
             this.tenkh.ReadOnly = true;
@@ -688,6 +703,7 @@ namespace QLNhaHang
             // sdt
             // 
             this.sdt.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.sdt.DataPropertyName = "SDT";
             this.sdt.HeaderText = "Số Điện Thoại";
             this.sdt.Name = "sdt";
             this.sdt.ReadOnly = true;
@@ -695,6 +711,7 @@ namespace QLNhaHang
             // ngban
             // 
             this.ngban.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ngban.DataPropertyName = "TenNhanVien";
             this.ngban.HeaderText = "Người Bán";
             this.ngban.Name = "ngban";
             this.ngban.ReadOnly = true;
@@ -702,6 +719,7 @@ namespace QLNhaHang
             // ngayban
             // 
             this.ngayban.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ngayban.DataPropertyName = "NgayTao";
             this.ngayban.HeaderText = "Ngày Bán";
             this.ngayban.Name = "ngayban";
             this.ngayban.ReadOnly = true;
@@ -709,9 +727,19 @@ namespace QLNhaHang
             // tongtien
             // 
             this.tongtien.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.tongtien.DataPropertyName = "TongTien";
             this.tongtien.HeaderText = "Tổng Tiền";
             this.tongtien.Name = "tongtien";
             this.tongtien.ReadOnly = true;
+            // 
+            // IDKhach
+            // 
+            this.IDKhach.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.IDKhach.DataPropertyName = "IDKhach";
+            this.IDKhach.HeaderText = "ID Khách Hàng";
+            this.IDKhach.Name = "IDKhach";
+            this.IDKhach.ReadOnly = true;
+            this.IDKhach.Width = 136;
             // 
             // namekh
             // 
@@ -763,7 +791,7 @@ namespace QLNhaHang
             ((System.ComponentModel.ISupportInitialize)(this.dtGridKhachHang)).EndInit();
             this.tabPage6.ResumeLayout(false);
             this.tabPage6.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtGridLichSuHoaDon)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -776,7 +804,7 @@ namespace QLNhaHang
         private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.TabPage tabPage5;
         private System.Windows.Forms.TabPage tabPage6;
-        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button btn_XoaNV;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button btn_TKNhanVien;
@@ -784,37 +812,31 @@ namespace QLNhaHang
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.DataGridView dtGridNhanVien;
         private System.Windows.Forms.DataGridView dtGridDanhMuc;
-        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Button btn_XoaDM;
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Button button11;
         private System.Windows.Forms.Button btn_TKDanhMuc;
         private System.Windows.Forms.TextBox txt_TKDanhMuc;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.DataGridView dtGridSanPham;
-        private System.Windows.Forms.Button button13;
+        private System.Windows.Forms.Button btn_XoaSP;
         private System.Windows.Forms.Button button14;
         private System.Windows.Forms.Button button15;
         private System.Windows.Forms.Button btn_TKSanPham;
         private System.Windows.Forms.TextBox txt_TKSanPham;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Button button17;
+        private System.Windows.Forms.Button btn_XoaKH;
         private System.Windows.Forms.Button btn_TKKhachHang;
         private System.Windows.Forms.TextBox txt_TKKhachHang;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.DataGridView dtGridKhachHang;
-        private System.Windows.Forms.DataGridView dataGridView7;
+        private System.Windows.Forms.DataGridView dtGridLichSuHoaDon;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Button button19;
-        private System.Windows.Forms.DataGridViewTextBoxColumn mahd;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tenkh;
-        private System.Windows.Forms.DataGridViewTextBoxColumn sdt;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ngban;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ngayban;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tongtien;
+        private System.Windows.Forms.Button btn_TimKiemHoaDon;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn HoTen;
         private System.Windows.Forms.DataGridViewTextBoxColumn TaiKhoan;
@@ -830,6 +852,13 @@ namespace QLNhaHang
         private System.Windows.Forms.DataGridViewTextBoxColumn SoLuongTon;
         private System.Windows.Forms.DataGridViewTextBoxColumn KhuyenMai;
         private System.Windows.Forms.DataGridViewTextBoxColumn Gia;
+        private System.Windows.Forms.DataGridViewTextBoxColumn mahd;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tenkh;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sdt;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ngban;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ngayban;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tongtien;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IDKhach;
         private System.Windows.Forms.DataGridViewTextBoxColumn namekh;
         private System.Windows.Forms.DataGridViewTextBoxColumn phone;
         private System.Windows.Forms.DataGridViewTextBoxColumn Diem;

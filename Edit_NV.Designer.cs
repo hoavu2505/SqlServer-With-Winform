@@ -30,54 +30,54 @@ namespace QLNhaHang
         private void InitializeComponent()
         {
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txt_HoTen = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.txt_SDT = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.cb_CaLamViec = new System.Windows.Forms.ComboBox();
+            this.rb_Nam = new System.Windows.Forms.RadioButton();
             this.label7 = new System.Windows.Forms.Label();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.rb_Nu = new System.Windows.Forms.RadioButton();
+            this.dtp_NgayBatDauLam = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dtp_NgaySinh = new System.Windows.Forms.DateTimePicker();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txt_DiaChi = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txt_TenTaiKhoan = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.txt_MatKhau = new System.Windows.Forms.TextBox();
+            this.btn_HuyBo = new System.Windows.Forms.Button();
+            this.btn_SuaNV = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.cb_ChucVu = new System.Windows.Forms.ComboBox();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.textBox1);
+            this.groupBox2.Controls.Add(this.cb_ChucVu);
+            this.groupBox2.Controls.Add(this.txt_HoTen);
             this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Controls.Add(this.textBox6);
+            this.groupBox2.Controls.Add(this.txt_SDT);
             this.groupBox2.Controls.Add(this.label11);
             this.groupBox2.Controls.Add(this.label8);
             this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Controls.Add(this.textBox5);
-            this.groupBox2.Controls.Add(this.comboBox1);
-            this.groupBox2.Controls.Add(this.radioButton1);
+            this.groupBox2.Controls.Add(this.cb_CaLamViec);
+            this.groupBox2.Controls.Add(this.rb_Nam);
             this.groupBox2.Controls.Add(this.label7);
-            this.groupBox2.Controls.Add(this.radioButton2);
-            this.groupBox2.Controls.Add(this.dateTimePicker2);
+            this.groupBox2.Controls.Add(this.rb_Nu);
+            this.groupBox2.Controls.Add(this.dtp_NgayBatDauLam);
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.label6);
-            this.groupBox2.Controls.Add(this.dateTimePicker1);
+            this.groupBox2.Controls.Add(this.dtp_NgaySinh);
             this.groupBox2.Controls.Add(this.label5);
-            this.groupBox2.Controls.Add(this.textBox4);
+            this.groupBox2.Controls.Add(this.txt_DiaChi);
             this.groupBox2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(29, 83);
             this.groupBox2.Name = "groupBox2";
@@ -86,13 +86,13 @@ namespace QLNhaHang
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thông Tin";
             // 
-            // textBox1
+            // txt_HoTen
             // 
-            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(234, 36);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(181, 25);
-            this.textBox1.TabIndex = 0;
+            this.txt_HoTen.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_HoTen.Location = new System.Drawing.Point(234, 36);
+            this.txt_HoTen.Name = "txt_HoTen";
+            this.txt_HoTen.Size = new System.Drawing.Size(181, 25);
+            this.txt_HoTen.TabIndex = 0;
             // 
             // label2
             // 
@@ -104,13 +104,13 @@ namespace QLNhaHang
             this.label2.TabIndex = 6;
             this.label2.Text = "Họ Tên";
             // 
-            // textBox6
+            // txt_SDT
             // 
-            this.textBox6.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(234, 246);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(181, 25);
-            this.textBox6.TabIndex = 25;
+            this.txt_SDT.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_SDT.Location = new System.Drawing.Point(234, 246);
+            this.txt_SDT.Name = "txt_SDT";
+            this.txt_SDT.Size = new System.Drawing.Size(181, 25);
+            this.txt_SDT.TabIndex = 25;
             // 
             // label11
             // 
@@ -142,38 +142,30 @@ namespace QLNhaHang
             this.label4.TabIndex = 9;
             this.label4.Text = "Giới Tính";
             // 
-            // textBox5
+            // cb_CaLamViec
             // 
-            this.textBox5.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(234, 421);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(181, 25);
-            this.textBox5.TabIndex = 4;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cb_CaLamViec.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cb_CaLamViec.FormattingEnabled = true;
+            this.cb_CaLamViec.Items.AddRange(new object[] {
             "Ca 1",
             "Ca 2",
             "Ca 3"});
-            this.comboBox1.Location = new System.Drawing.Point(234, 362);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(181, 25);
-            this.comboBox1.TabIndex = 16;
+            this.cb_CaLamViec.Location = new System.Drawing.Point(234, 362);
+            this.cb_CaLamViec.Name = "cb_CaLamViec";
+            this.cb_CaLamViec.Size = new System.Drawing.Size(181, 25);
+            this.cb_CaLamViec.TabIndex = 16;
             // 
-            // radioButton1
+            // rb_Nam
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton1.Location = new System.Drawing.Point(261, 84);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(54, 21);
-            this.radioButton1.TabIndex = 10;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Nam";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.rb_Nam.AutoSize = true;
+            this.rb_Nam.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rb_Nam.Location = new System.Drawing.Point(261, 84);
+            this.rb_Nam.Name = "rb_Nam";
+            this.rb_Nam.Size = new System.Drawing.Size(54, 21);
+            this.rb_Nam.TabIndex = 10;
+            this.rb_Nam.TabStop = true;
+            this.rb_Nam.Text = "Nam";
+            this.rb_Nam.UseVisualStyleBackColor = true;
             // 
             // label7
             // 
@@ -185,25 +177,25 @@ namespace QLNhaHang
             this.label7.TabIndex = 15;
             this.label7.Text = "Ca Làm Việc";
             // 
-            // radioButton2
+            // rb_Nu
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton2.Location = new System.Drawing.Point(349, 84);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(44, 21);
-            this.radioButton2.TabIndex = 11;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Nữ";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.rb_Nu.AutoSize = true;
+            this.rb_Nu.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rb_Nu.Location = new System.Drawing.Point(349, 84);
+            this.rb_Nu.Name = "rb_Nu";
+            this.rb_Nu.Size = new System.Drawing.Size(44, 21);
+            this.rb_Nu.TabIndex = 11;
+            this.rb_Nu.TabStop = true;
+            this.rb_Nu.Text = "Nữ";
+            this.rb_Nu.UseVisualStyleBackColor = true;
             // 
-            // dateTimePicker2
+            // dtp_NgayBatDauLam
             // 
-            this.dateTimePicker2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker2.Location = new System.Drawing.Point(234, 303);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(181, 25);
-            this.dateTimePicker2.TabIndex = 14;
+            this.dtp_NgayBatDauLam.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtp_NgayBatDauLam.Location = new System.Drawing.Point(234, 303);
+            this.dtp_NgayBatDauLam.Name = "dtp_NgayBatDauLam";
+            this.dtp_NgayBatDauLam.Size = new System.Drawing.Size(181, 25);
+            this.dtp_NgayBatDauLam.TabIndex = 14;
             // 
             // label3
             // 
@@ -225,13 +217,13 @@ namespace QLNhaHang
             this.label6.TabIndex = 13;
             this.label6.Text = "Ngày Bắt Đầu Làm Việc";
             // 
-            // dateTimePicker1
+            // dtp_NgaySinh
             // 
-            this.dateTimePicker1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(234, 136);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(181, 25);
-            this.dateTimePicker1.TabIndex = 8;
+            this.dtp_NgaySinh.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtp_NgaySinh.Location = new System.Drawing.Point(234, 136);
+            this.dtp_NgaySinh.Name = "dtp_NgaySinh";
+            this.dtp_NgaySinh.Size = new System.Drawing.Size(181, 25);
+            this.dtp_NgaySinh.TabIndex = 8;
             // 
             // label5
             // 
@@ -243,20 +235,20 @@ namespace QLNhaHang
             this.label5.TabIndex = 12;
             this.label5.Text = "Địa Chỉ";
             // 
-            // textBox4
+            // txt_DiaChi
             // 
-            this.textBox4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(234, 191);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(181, 25);
-            this.textBox4.TabIndex = 3;
+            this.txt_DiaChi.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_DiaChi.Location = new System.Drawing.Point(234, 191);
+            this.txt_DiaChi.Name = "txt_DiaChi";
+            this.txt_DiaChi.Size = new System.Drawing.Size(181, 25);
+            this.txt_DiaChi.TabIndex = 3;
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.label9);
-            this.groupBox1.Controls.Add(this.textBox2);
+            this.groupBox1.Controls.Add(this.txt_TenTaiKhoan);
             this.groupBox1.Controls.Add(this.label10);
-            this.groupBox1.Controls.Add(this.textBox3);
+            this.groupBox1.Controls.Add(this.txt_MatKhau);
             this.groupBox1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(529, 83);
             this.groupBox1.Name = "groupBox1";
@@ -275,13 +267,13 @@ namespace QLNhaHang
             this.label9.TabIndex = 19;
             this.label9.Text = "Tên Tài Khoản";
             // 
-            // textBox2
+            // txt_TenTaiKhoan
             // 
-            this.textBox2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(130, 49);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(181, 25);
-            this.textBox2.TabIndex = 18;
+            this.txt_TenTaiKhoan.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_TenTaiKhoan.Location = new System.Drawing.Point(130, 49);
+            this.txt_TenTaiKhoan.Name = "txt_TenTaiKhoan";
+            this.txt_TenTaiKhoan.Size = new System.Drawing.Size(181, 25);
+            this.txt_TenTaiKhoan.TabIndex = 18;
             // 
             // label10
             // 
@@ -293,34 +285,36 @@ namespace QLNhaHang
             this.label10.TabIndex = 21;
             this.label10.Text = "Mật Khẩu";
             // 
-            // textBox3
+            // txt_MatKhau
             // 
-            this.textBox3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(130, 104);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(181, 25);
-            this.textBox3.TabIndex = 20;
-            this.textBox3.UseSystemPasswordChar = true;
+            this.txt_MatKhau.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_MatKhau.Location = new System.Drawing.Point(130, 104);
+            this.txt_MatKhau.Name = "txt_MatKhau";
+            this.txt_MatKhau.Size = new System.Drawing.Size(181, 25);
+            this.txt_MatKhau.TabIndex = 20;
+            this.txt_MatKhau.UseSystemPasswordChar = true;
             // 
-            // button2
+            // btn_HuyBo
             // 
-            this.button2.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(756, 509);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(98, 42);
-            this.button2.TabIndex = 30;
-            this.button2.Text = "HỦY BỎ";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btn_HuyBo.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_HuyBo.Location = new System.Drawing.Point(756, 509);
+            this.btn_HuyBo.Name = "btn_HuyBo";
+            this.btn_HuyBo.Size = new System.Drawing.Size(98, 42);
+            this.btn_HuyBo.TabIndex = 30;
+            this.btn_HuyBo.Text = "HỦY BỎ";
+            this.btn_HuyBo.UseVisualStyleBackColor = true;
+            this.btn_HuyBo.Click += new System.EventHandler(this.btn_HuyBo_Click);
             // 
-            // button1
+            // btn_SuaNV
             // 
-            this.button1.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(529, 509);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(98, 42);
-            this.button1.TabIndex = 29;
-            this.button1.Text = "SỬA";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btn_SuaNV.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_SuaNV.Location = new System.Drawing.Point(529, 509);
+            this.btn_SuaNV.Name = "btn_SuaNV";
+            this.btn_SuaNV.Size = new System.Drawing.Size(98, 42);
+            this.btn_SuaNV.TabIndex = 29;
+            this.btn_SuaNV.Text = "SỬA";
+            this.btn_SuaNV.UseVisualStyleBackColor = true;
+            this.btn_SuaNV.Click += new System.EventHandler(this.btn_SuaNV_Click);
             // 
             // label1
             // 
@@ -332,6 +326,18 @@ namespace QLNhaHang
             this.label1.TabIndex = 28;
             this.label1.Text = "SỬA NHÂN VIÊN";
             // 
+            // cb_ChucVu
+            // 
+            this.cb_ChucVu.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cb_ChucVu.FormattingEnabled = true;
+            this.cb_ChucVu.Items.AddRange(new object[] {
+            "Nhân Viên"});
+            this.cb_ChucVu.Location = new System.Drawing.Point(234, 418);
+            this.cb_ChucVu.Name = "cb_ChucVu";
+            this.cb_ChucVu.Size = new System.Drawing.Size(181, 25);
+            this.cb_ChucVu.TabIndex = 26;
+            this.cb_ChucVu.Text = "Nhân Viên";
+            // 
             // Edit_NV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -339,8 +345,8 @@ namespace QLNhaHang
             this.ClientSize = new System.Drawing.Size(882, 579);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btn_HuyBo);
+            this.Controls.Add(this.btn_SuaNV);
             this.Controls.Add(this.label1);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -359,30 +365,30 @@ namespace QLNhaHang
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txt_HoTen;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox txt_SDT;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.ComboBox cb_CaLamViec;
+        private System.Windows.Forms.RadioButton rb_Nam;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.RadioButton rb_Nu;
+        private System.Windows.Forms.DateTimePicker dtp_NgayBatDauLam;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtp_NgaySinh;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txt_DiaChi;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txt_TenTaiKhoan;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox txt_MatKhau;
+        private System.Windows.Forms.Button btn_HuyBo;
+        private System.Windows.Forms.Button btn_SuaNV;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox cb_ChucVu;
     }
 }

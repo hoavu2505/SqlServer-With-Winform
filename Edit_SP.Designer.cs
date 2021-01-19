@@ -30,36 +30,36 @@ namespace QLNhaHang
         private void InitializeComponent()
         {
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cb_DanhMuc = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.nb_SoLuong = new System.Windows.Forms.NumericUpDown();
+            this.txt_TenSP = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txt_MaSP = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dtp_NgaySX = new System.Windows.Forms.DateTimePicker();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txt_XuatXu = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txt_DonGia = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txt_KhuyenMai = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nb_SoLuong)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.comboBox1);
+            this.groupBox3.Controls.Add(this.cb_DanhMuc);
             this.groupBox3.Controls.Add(this.label6);
             this.groupBox3.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.Location = new System.Drawing.Point(529, 269);
@@ -69,14 +69,14 @@ namespace QLNhaHang
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Danh Mục";
             // 
-            // comboBox1
+            // cb_DanhMuc
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(130, 41);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(181, 25);
-            this.comboBox1.TabIndex = 20;
+            this.cb_DanhMuc.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cb_DanhMuc.FormattingEnabled = true;
+            this.cb_DanhMuc.Location = new System.Drawing.Point(130, 41);
+            this.cb_DanhMuc.Name = "cb_DanhMuc";
+            this.cb_DanhMuc.Size = new System.Drawing.Size(181, 25);
+            this.cb_DanhMuc.TabIndex = 20;
             // 
             // label6
             // 
@@ -90,16 +90,16 @@ namespace QLNhaHang
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.numericUpDown1);
-            this.groupBox2.Controls.Add(this.textBox7);
+            this.groupBox2.Controls.Add(this.nb_SoLuong);
+            this.groupBox2.Controls.Add(this.txt_TenSP);
             this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Controls.Add(this.textBox1);
+            this.groupBox2.Controls.Add(this.txt_MaSP);
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.label11);
             this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Controls.Add(this.dateTimePicker1);
+            this.groupBox2.Controls.Add(this.dtp_NgaySX);
             this.groupBox2.Controls.Add(this.label5);
-            this.groupBox2.Controls.Add(this.textBox4);
+            this.groupBox2.Controls.Add(this.txt_XuatXu);
             this.groupBox2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(29, 91);
             this.groupBox2.Name = "groupBox2";
@@ -108,21 +108,21 @@ namespace QLNhaHang
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thông Tin";
             // 
-            // numericUpDown1
+            // nb_SoLuong
             // 
-            this.numericUpDown1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown1.Location = new System.Drawing.Point(234, 272);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(92, 25);
-            this.numericUpDown1.TabIndex = 28;
+            this.nb_SoLuong.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nb_SoLuong.Location = new System.Drawing.Point(234, 272);
+            this.nb_SoLuong.Name = "nb_SoLuong";
+            this.nb_SoLuong.Size = new System.Drawing.Size(92, 25);
+            this.nb_SoLuong.TabIndex = 28;
             // 
-            // textBox7
+            // txt_TenSP
             // 
-            this.textBox7.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.Location = new System.Drawing.Point(234, 107);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(181, 25);
-            this.textBox7.TabIndex = 26;
+            this.txt_TenSP.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_TenSP.Location = new System.Drawing.Point(234, 107);
+            this.txt_TenSP.Name = "txt_TenSP";
+            this.txt_TenSP.Size = new System.Drawing.Size(181, 25);
+            this.txt_TenSP.TabIndex = 26;
             // 
             // label4
             // 
@@ -134,13 +134,13 @@ namespace QLNhaHang
             this.label4.TabIndex = 27;
             this.label4.Text = "Tên SP";
             // 
-            // textBox1
+            // txt_MaSP
             // 
-            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(234, 49);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(181, 25);
-            this.textBox1.TabIndex = 0;
+            this.txt_MaSP.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_MaSP.Location = new System.Drawing.Point(234, 49);
+            this.txt_MaSP.Name = "txt_MaSP";
+            this.txt_MaSP.Size = new System.Drawing.Size(181, 25);
+            this.txt_MaSP.TabIndex = 0;
             // 
             // label2
             // 
@@ -172,13 +172,13 @@ namespace QLNhaHang
             this.label3.TabIndex = 7;
             this.label3.Text = "Ngày Sản Xuất";
             // 
-            // dateTimePicker1
+            // dtp_NgaySX
             // 
-            this.dateTimePicker1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(234, 164);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(181, 25);
-            this.dateTimePicker1.TabIndex = 8;
+            this.dtp_NgaySX.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtp_NgaySX.Location = new System.Drawing.Point(234, 164);
+            this.dtp_NgaySX.Name = "dtp_NgaySX";
+            this.dtp_NgaySX.Size = new System.Drawing.Size(181, 25);
+            this.dtp_NgaySX.TabIndex = 8;
             // 
             // label5
             // 
@@ -190,20 +190,20 @@ namespace QLNhaHang
             this.label5.TabIndex = 12;
             this.label5.Text = "Xuất Xứ";
             // 
-            // textBox4
+            // txt_XuatXu
             // 
-            this.textBox4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(234, 219);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(181, 25);
-            this.textBox4.TabIndex = 3;
+            this.txt_XuatXu.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_XuatXu.Location = new System.Drawing.Point(234, 219);
+            this.txt_XuatXu.Name = "txt_XuatXu";
+            this.txt_XuatXu.Size = new System.Drawing.Size(181, 25);
+            this.txt_XuatXu.TabIndex = 3;
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.label9);
-            this.groupBox1.Controls.Add(this.textBox2);
+            this.groupBox1.Controls.Add(this.txt_DonGia);
             this.groupBox1.Controls.Add(this.label10);
-            this.groupBox1.Controls.Add(this.textBox3);
+            this.groupBox1.Controls.Add(this.txt_KhuyenMai);
             this.groupBox1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(529, 91);
             this.groupBox1.Name = "groupBox1";
@@ -222,13 +222,13 @@ namespace QLNhaHang
             this.label9.TabIndex = 19;
             this.label9.Text = "Đơn Giá";
             // 
-            // textBox2
+            // txt_DonGia
             // 
-            this.textBox2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(130, 49);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(181, 25);
-            this.textBox2.TabIndex = 18;
+            this.txt_DonGia.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_DonGia.Location = new System.Drawing.Point(130, 49);
+            this.txt_DonGia.Name = "txt_DonGia";
+            this.txt_DonGia.Size = new System.Drawing.Size(181, 25);
+            this.txt_DonGia.TabIndex = 18;
             // 
             // label10
             // 
@@ -240,14 +240,14 @@ namespace QLNhaHang
             this.label10.TabIndex = 21;
             this.label10.Text = "Khuyến Mại";
             // 
-            // textBox3
+            // txt_KhuyenMai
             // 
-            this.textBox3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(130, 104);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(181, 25);
-            this.textBox3.TabIndex = 20;
-            this.textBox3.UseSystemPasswordChar = true;
+            this.txt_KhuyenMai.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_KhuyenMai.Location = new System.Drawing.Point(130, 104);
+            this.txt_KhuyenMai.Name = "txt_KhuyenMai";
+            this.txt_KhuyenMai.Size = new System.Drawing.Size(181, 25);
+            this.txt_KhuyenMai.TabIndex = 20;
+            this.txt_KhuyenMai.UseSystemPasswordChar = true;
             // 
             // button2
             // 
@@ -296,7 +296,7 @@ namespace QLNhaHang
             this.groupBox3.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nb_SoLuong)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -307,24 +307,24 @@ namespace QLNhaHang
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cb_DanhMuc;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.NumericUpDown nb_SoLuong;
+        private System.Windows.Forms.TextBox txt_TenSP;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txt_MaSP;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtp_NgaySX;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txt_XuatXu;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txt_DonGia;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txt_KhuyenMai;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;

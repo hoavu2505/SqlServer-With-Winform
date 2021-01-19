@@ -35,11 +35,9 @@ namespace QLNhaHang
                 gt = rb_nu.Text;
             }
 
-            string ngaymothe = DateTime.Now.ToString("yyyy-MM-dd");
-
             if (txt_tenKhachHang.Text != "" || txt_SDT.Text != "")
             {
-                if (connect.exedata(" insert into KHACHHANG (HoTen,SDT,NgaySinh,GioiTinh,DiaChi,NgayMoThe,DiemTichLuy) values (N'"+txt_tenKhachHang.Text+"', '"+txt_SDT.Text+"', '"+dt_NgaySinh.Value.Date.ToString("yyyy-MM-dd") +"', N'"+gt+"', N'"+txt_DiaChi.Text+"', '"+ngaymothe+"', '0') " ) == true)
+                if (connect.exedata(" insert into KHACHHANG (HoTen,SDT,NgaySinh,GioiTinh,DiaChi,NgayMoThe,DiemTichLuy) values (N'"+txt_tenKhachHang.Text+"', '"+txt_SDT.Text+"', '"+dt_NgaySinh.Value.Date.ToString("yyyy-MM-dd") +"', N'"+gt+"', N'"+txt_DiaChi.Text+"', getdate(), '0') " ) == true)
                 {
                     DialogResult dlr = MessageBox.Show("Đã thêm dữ liệu thành công");
                     if (dlr == DialogResult.OK)
