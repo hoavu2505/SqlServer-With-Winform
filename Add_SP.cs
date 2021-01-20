@@ -59,6 +59,10 @@ namespace QLNhaHang
                         this.Close();
                     }
                 }
+                else
+                {
+                    MessageBox.Show("Không thể thêm dữ liệu");
+                }
             }
             else
             {

@@ -74,7 +74,7 @@ namespace QLNhaHang
         {
             if (txt_MaSP.Text != "" || txt_TenSP.Text != "")
             {
-                if (connect.exedata("Update MATHANG Set IDSanPham = '" + txt_MaSP.Text.ToString() + "' , TenSanPham = N'" + txt_TenSP.Text.ToString() + "' , NgaySX = '" + dtp_NgaySX.Value.Date.ToString("yyyy-MM-dd") + "' , XuatXu = N'" + txt_XuatXu.Text.ToString() + "' , SoLuongTon = " + Convert.ToInt32(nb_SoLuong.Value.ToString()) + " , Gia = " + Convert.ToInt32(txt_DonGia.Text.ToString()) + " , KhuyenMai = '" + Convert.ToInt32(txt_KhuyenMai.Text.ToString()) + "' , IDDanhMuc = " + iddm + " where IDSanPham = '"+id+"' ") == true)
+                if (connect.exedata("Update MATHANG Set IDSanPham = '" + txt_MaSP.Text.ToString() + "' , TenSanPham = N'" + txt_TenSP.Text.ToString() + "' , NgaySX = '" + dtp_NgaySX.Value.Date.ToString("yyyy-MM-dd") + "' , XuatXu = N'" + txt_XuatXu.Text.ToString() + "' , SoLuongTon = " + Convert.ToInt32(nb_SoLuong.Value.ToString()) + " , Gia = " + Convert.ToInt32(txt_DonGia.Text.ToString()) + " , KhuyenMai = '" + Convert.ToDouble(txt_KhuyenMai.Text.ToString()) + "' , IDDanhMuc = " + iddm + " where IDSanPham = '"+id+"' ") == true)
                 {
                     DialogResult dlr = MessageBox.Show("Đã sửa dữ liệu thành công");
                     if (dlr == DialogResult.OK)

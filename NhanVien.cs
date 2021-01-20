@@ -98,16 +98,17 @@ namespace QLNhaHang
         }
 
         int tongsosanpham = 0;
+        bool check = true;
         private void btn_ThemSP_Click(object sender, EventArgs e)
         {
             DataTable dt = connect.readdata("Select * from MATHANG where IDSanPham = '" + dtGridChonSanPham.Rows[vitri1].Cells[0].Value + "'");
             if (dt != null)
             {
-                if (tongsosanpham == 0)
+                if (check == true)
                 {
                     if (connect.exedata("insert into HOADON(NgayTao, IDNhanVien, IDKhach) values (getdate(), " + Login.ID + ", " + ID_KH + ")"))
                     {
-                        tongsosanpham = tongsosanpham + Convert.ToInt32(nb_SoLuong.Value);
+                        check = false;
                         DataTable dt2 = connect.readdata("select max(IDHoaDon) as sohoadon from HOADON");
                         int idhoadon = -1;
                         foreach (DataRow dr2 in dt2.Rows)
@@ -116,14 +117,16 @@ namespace QLNhaHang
                         }
                         foreach (DataRow dr in dt.Rows)
                         {
-                            connect.exedata("Execute sp_ThemSanPhamCTHoaDon " + idhoadon + ", " + dr["IDSanPham"].ToString() + ", " + Convert.ToInt32(nb_SoLuong.Value.ToString()) + ", " + Convert.ToInt32(dr["Gia"].ToString()) + ", " + Convert.ToDouble(dr["KhuyenMai"].ToString()));
+                            if (connect.exedata("Execute sp_ThemSanPhamCTHoaDon " + idhoadon + ", " + dr["IDSanPham"].ToString() + ", " + Convert.ToInt32(nb_SoLuong.Value.ToString()) + ", " + Convert.ToInt32(dr["Gia"].ToString()) + ", " + Convert.ToDouble(dr["KhuyenMai"].ToString())) == true)
+                            {
+                                tongsosanpham = tongsosanpham + Convert.ToInt32(nb_SoLuong.Value);
+                            }
                             connect.exedata("Execute sp_CapNhatHoaDon " + idhoadon);
                         }
                     }
                 }
                 else
                 {
-                    tongsosanpham = tongsosanpham + Convert.ToInt32(nb_SoLuong.Value);
                     DataTable dt2 = connect.readdata("select max(IDHoaDon) as sohoadon from HOADON");
                     int idhoadon = -1;
                     foreach (DataRow dr2 in dt2.Rows)
@@ -132,7 +135,10 @@ namespace QLNhaHang
                     }
                     foreach (DataRow dr in dt.Rows)
                     {
-                        connect.exedata("Execute sp_ThemSanPhamCTHoaDon " + idhoadon + ", " + dr["IDSanPham"].ToString() + ", " + Convert.ToInt32(nb_SoLuong.Value.ToString()) + ", " + Convert.ToInt32(dr["Gia"].ToString()) + ", " + Convert.ToDouble(dr["KhuyenMai"].ToString()));
+                        if (connect.exedata("Execute sp_ThemSanPhamCTHoaDon " + idhoadon + ", " + dr["IDSanPham"].ToString() + ", " + Convert.ToInt32(nb_SoLuong.Value.ToString()) + ", " + Convert.ToInt32(dr["Gia"].ToString()) + ", " + Convert.ToDouble(dr["KhuyenMai"].ToString())) == true)
+                        {
+                            tongsosanpham = tongsosanpham + Convert.ToInt32(nb_SoLuong.Value);
+                        }
                         connect.exedata("Execute sp_CapNhatHoaDon " + idhoadon);
                     }
                 }
